@@ -14,6 +14,7 @@
 		D48A7B752C39D09000D3EDF7 /* StylorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B742C39D09000D3EDF7 /* StylorTests.swift */; };
 		D48A7B7F2C39D09000D3EDF7 /* StylorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B7E2C39D09000D3EDF7 /* StylorUITests.swift */; };
 		D48A7B812C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B802C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift */; };
+		D48A7B9A2C39D22C00D3EDF7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B992C39D22C00D3EDF7 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		D48A7B7A2C39D09000D3EDF7 /* StylorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StylorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48A7B7E2C39D09000D3EDF7 /* StylorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylorUITests.swift; sourceTree = "<group>"; };
 		D48A7B802C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D48A7B992C39D22C00D3EDF7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,11 @@
 		D48A7B622C39D08F00D3EDF7 /* Stylor */ = {
 			isa = PBXGroup;
 			children = (
-				D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */,
-				D48A7B652C39D08F00D3EDF7 /* ContentView.swift */,
+				D48A7B912C39D12F00D3EDF7 /* Utils */,
+				D48A7B902C39D12700D3EDF7 /* Shared */,
+				D48A7B8F2C39D11F00D3EDF7 /* Extensions */,
+				D48A7B8E2C39D11400D3EDF7 /* Core */,
+				D48A7B8D2C39D0FE00D3EDF7 /* App */,
 				D48A7B672C39D09000D3EDF7 /* Assets.xcassets */,
 				D48A7B692C39D09000D3EDF7 /* Preview Content */,
 			);
@@ -125,6 +130,84 @@
 				D48A7B802C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift */,
 			);
 			path = StylorUITests;
+			sourceTree = "<group>";
+		};
+		D48A7B8D2C39D0FE00D3EDF7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */,
+				D48A7B652C39D08F00D3EDF7 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D48A7B8E2C39D11400D3EDF7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7B962C39D1B600D3EDF7 /* Messaging */,
+				D48A7B952C39D19500D3EDF7 /* Cards */,
+				D48A7B942C39D18800D3EDF7 /* Profile */,
+				D48A7B932C39D18200D3EDF7 /* Search */,
+				D48A7B922C39D16E00D3EDF7 /* TabBar */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D48A7B8F2C39D11F00D3EDF7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D48A7B902C39D12700D3EDF7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D48A7B912C39D12F00D3EDF7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D48A7B922C39D16E00D3EDF7 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7B992C39D22C00D3EDF7 /* MainTabView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D48A7B932C39D18200D3EDF7 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D48A7B942C39D18800D3EDF7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D48A7B952C39D19500D3EDF7 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		D48A7B962C39D1B600D3EDF7 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Messaging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +342,7 @@
 			files = (
 				D48A7B662C39D08F00D3EDF7 /* ContentView.swift in Sources */,
 				D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */,
+				D48A7B9A2C39D22C00D3EDF7 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
