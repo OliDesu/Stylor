@@ -15,6 +15,8 @@
 		D48A7B7F2C39D09000D3EDF7 /* StylorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B7E2C39D09000D3EDF7 /* StylorUITests.swift */; };
 		D48A7B812C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B802C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift */; };
 		D48A7B9A2C39D22C00D3EDF7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B992C39D22C00D3EDF7 /* MainTabView.swift */; };
+		D48A7B9C2C39DACF00D3EDF7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B9B2C39DACF00D3EDF7 /* CardView.swift */; };
+		D48A7B9F2C39DE3D00D3EDF7 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B9E2C39DE3D00D3EDF7 /* UserInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		D48A7B7E2C39D09000D3EDF7 /* StylorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylorUITests.swift; sourceTree = "<group>"; };
 		D48A7B802C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D48A7B992C39D22C00D3EDF7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		D48A7B9B2C39DACF00D3EDF7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D48A7B9E2C39DE3D00D3EDF7 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,7 @@
 		D48A7B952C39D19500D3EDF7 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				D48A7B9D2C39DE1D00D3EDF7 /* Views */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -208,6 +213,15 @@
 			children = (
 			);
 			path = Messaging;
+			sourceTree = "<group>";
+		};
+		D48A7B9D2C39DE1D00D3EDF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7B9B2C39DACF00D3EDF7 /* CardView.swift */,
+				D48A7B9E2C39DE3D00D3EDF7 /* UserInfoView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +356,9 @@
 			files = (
 				D48A7B662C39D08F00D3EDF7 /* ContentView.swift in Sources */,
 				D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */,
+				D48A7B9C2C39DACF00D3EDF7 /* CardView.swift in Sources */,
 				D48A7B9A2C39D22C00D3EDF7 /* MainTabView.swift in Sources */,
+				D48A7B9F2C39DE3D00D3EDF7 /* UserInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
