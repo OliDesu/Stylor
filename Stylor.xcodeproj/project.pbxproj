@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */; };
+		D48A7B662C39D08F00D3EDF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B652C39D08F00D3EDF7 /* ContentView.swift */; };
+		D48A7B682C39D09000D3EDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48A7B672C39D09000D3EDF7 /* Assets.xcassets */; };
+		D48A7B6B2C39D09000D3EDF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48A7B6A2C39D09000D3EDF7 /* Preview Assets.xcassets */; };
+		D48A7B752C39D09000D3EDF7 /* StylorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B742C39D09000D3EDF7 /* StylorTests.swift */; };
+		D48A7B7F2C39D09000D3EDF7 /* StylorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B7E2C39D09000D3EDF7 /* StylorUITests.swift */; };
+		D48A7B812C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B802C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D48A7B712C39D09000D3EDF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D48A7B582C39D08F00D3EDF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D48A7B5F2C39D08F00D3EDF7;
+			remoteInfo = Stylor;
+		};
+		D48A7B7B2C39D09000D3EDF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D48A7B582C39D08F00D3EDF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D48A7B5F2C39D08F00D3EDF7;
+			remoteInfo = Stylor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D48A7B602C39D08F00D3EDF7 /* Stylor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stylor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylorApp.swift; sourceTree = "<group>"; };
+		D48A7B652C39D08F00D3EDF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D48A7B672C39D09000D3EDF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D48A7B6A2C39D09000D3EDF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D48A7B702C39D09000D3EDF7 /* StylorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StylorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48A7B742C39D09000D3EDF7 /* StylorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylorTests.swift; sourceTree = "<group>"; };
+		D48A7B7A2C39D09000D3EDF7 /* StylorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StylorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48A7B7E2C39D09000D3EDF7 /* StylorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylorUITests.swift; sourceTree = "<group>"; };
+		D48A7B802C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D48A7B5D2C39D08F00D3EDF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48A7B6D2C39D09000D3EDF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48A7B772C39D09000D3EDF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D48A7B572C39D08F00D3EDF7 = {
+			isa = PBXGroup;
+			children = (
+				D48A7B622C39D08F00D3EDF7 /* Stylor */,
+				D48A7B732C39D09000D3EDF7 /* StylorTests */,
+				D48A7B7D2C39D09000D3EDF7 /* StylorUITests */,
+				D48A7B612C39D08F00D3EDF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D48A7B612C39D08F00D3EDF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7B602C39D08F00D3EDF7 /* Stylor.app */,
+				D48A7B702C39D09000D3EDF7 /* StylorTests.xctest */,
+				D48A7B7A2C39D09000D3EDF7 /* StylorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D48A7B622C39D08F00D3EDF7 /* Stylor */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */,
+				D48A7B652C39D08F00D3EDF7 /* ContentView.swift */,
+				D48A7B672C39D09000D3EDF7 /* Assets.xcassets */,
+				D48A7B692C39D09000D3EDF7 /* Preview Content */,
+			);
+			path = Stylor;
+			sourceTree = "<group>";
+		};
+		D48A7B692C39D09000D3EDF7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7B6A2C39D09000D3EDF7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D48A7B732C39D09000D3EDF7 /* StylorTests */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7B742C39D09000D3EDF7 /* StylorTests.swift */,
+			);
+			path = StylorTests;
+			sourceTree = "<group>";
+		};
+		D48A7B7D2C39D09000D3EDF7 /* StylorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7B7E2C39D09000D3EDF7 /* StylorUITests.swift */,
+				D48A7B802C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift */,
+			);
+			path = StylorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D48A7B5F2C39D08F00D3EDF7 /* Stylor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48A7B842C39D09000D3EDF7 /* Build configuration list for PBXNativeTarget "Stylor" */;
+			buildPhases = (
+				D48A7B5C2C39D08F00D3EDF7 /* Sources */,
+				D48A7B5D2C39D08F00D3EDF7 /* Frameworks */,
+				D48A7B5E2C39D08F00D3EDF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Stylor;
+			productName = Stylor;
+			productReference = D48A7B602C39D08F00D3EDF7 /* Stylor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D48A7B6F2C39D09000D3EDF7 /* StylorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48A7B872C39D09000D3EDF7 /* Build configuration list for PBXNativeTarget "StylorTests" */;
+			buildPhases = (
+				D48A7B6C2C39D09000D3EDF7 /* Sources */,
+				D48A7B6D2C39D09000D3EDF7 /* Frameworks */,
+				D48A7B6E2C39D09000D3EDF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D48A7B722C39D09000D3EDF7 /* PBXTargetDependency */,
+			);
+			name = StylorTests;
+			productName = StylorTests;
+			productReference = D48A7B702C39D09000D3EDF7 /* StylorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D48A7B792C39D09000D3EDF7 /* StylorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48A7B8A2C39D09000D3EDF7 /* Build configuration list for PBXNativeTarget "StylorUITests" */;
+			buildPhases = (
+				D48A7B762C39D09000D3EDF7 /* Sources */,
+				D48A7B772C39D09000D3EDF7 /* Frameworks */,
+				D48A7B782C39D09000D3EDF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D48A7B7C2C39D09000D3EDF7 /* PBXTargetDependency */,
+			);
+			name = StylorUITests;
+			productName = StylorUITests;
+			productReference = D48A7B7A2C39D09000D3EDF7 /* StylorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D48A7B582C39D08F00D3EDF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					D48A7B5F2C39D08F00D3EDF7 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					D48A7B6F2C39D09000D3EDF7 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D48A7B5F2C39D08F00D3EDF7;
+					};
+					D48A7B792C39D09000D3EDF7 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D48A7B5F2C39D08F00D3EDF7;
+					};
+				};
+			};
+			buildConfigurationList = D48A7B5B2C39D08F00D3EDF7 /* Build configuration list for PBXProject "Stylor" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D48A7B572C39D08F00D3EDF7;
+			productRefGroup = D48A7B612C39D08F00D3EDF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D48A7B5F2C39D08F00D3EDF7 /* Stylor */,
+				D48A7B6F2C39D09000D3EDF7 /* StylorTests */,
+				D48A7B792C39D09000D3EDF7 /* StylorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D48A7B5E2C39D08F00D3EDF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48A7B6B2C39D09000D3EDF7 /* Preview Assets.xcassets in Resources */,
+				D48A7B682C39D09000D3EDF7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48A7B6E2C39D09000D3EDF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48A7B782C39D09000D3EDF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D48A7B5C2C39D08F00D3EDF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48A7B662C39D08F00D3EDF7 /* ContentView.swift in Sources */,
+				D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48A7B6C2C39D09000D3EDF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48A7B752C39D09000D3EDF7 /* StylorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48A7B762C39D09000D3EDF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48A7B7F2C39D09000D3EDF7 /* StylorUITests.swift in Sources */,
+				D48A7B812C39D09000D3EDF7 /* StylorUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D48A7B722C39D09000D3EDF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D48A7B5F2C39D08F00D3EDF7 /* Stylor */;
+			targetProxy = D48A7B712C39D09000D3EDF7 /* PBXContainerItemProxy */;
+		};
+		D48A7B7C2C39D09000D3EDF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D48A7B5F2C39D08F00D3EDF7 /* Stylor */;
+			targetProxy = D48A7B7B2C39D09000D3EDF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D48A7B822C39D09000D3EDF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D48A7B832C39D09000D3EDF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D48A7B852C39D09000D3EDF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Stylor/Preview Content\"";
+				DEVELOPMENT_TEAM = NN424AMHS3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CleanYourRoom.Stylor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D48A7B862C39D09000D3EDF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Stylor/Preview Content\"";
+				DEVELOPMENT_TEAM = NN424AMHS3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CleanYourRoom.Stylor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D48A7B882C39D09000D3EDF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NN424AMHS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CleanYourRoom.StylorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stylor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stylor";
+			};
+			name = Debug;
+		};
+		D48A7B892C39D09000D3EDF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NN424AMHS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CleanYourRoom.StylorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stylor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stylor";
+			};
+			name = Release;
+		};
+		D48A7B8B2C39D09000D3EDF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NN424AMHS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CleanYourRoom.StylorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Stylor;
+			};
+			name = Debug;
+		};
+		D48A7B8C2C39D09000D3EDF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NN424AMHS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CleanYourRoom.StylorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Stylor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D48A7B5B2C39D08F00D3EDF7 /* Build configuration list for PBXProject "Stylor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48A7B822C39D09000D3EDF7 /* Debug */,
+				D48A7B832C39D09000D3EDF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48A7B842C39D09000D3EDF7 /* Build configuration list for PBXNativeTarget "Stylor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48A7B852C39D09000D3EDF7 /* Debug */,
+				D48A7B862C39D09000D3EDF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48A7B872C39D09000D3EDF7 /* Build configuration list for PBXNativeTarget "StylorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48A7B882C39D09000D3EDF7 /* Debug */,
+				D48A7B892C39D09000D3EDF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48A7B8A2C39D09000D3EDF7 /* Build configuration list for PBXNativeTarget "StylorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48A7B8B2C39D09000D3EDF7 /* Debug */,
+				D48A7B8C2C39D09000D3EDF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D48A7B582C39D08F00D3EDF7 /* Project object */;
+}
