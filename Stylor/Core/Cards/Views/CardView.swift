@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CardView: View {
+    @State private var xOffset: CGFloat = 0
+    @State private var degrees: Double = 0
+   // @State private var cardOpacity: Double = 100.0
     var body: some View {
         ZStack(alignment: .bottom){
             Image(.messi)
@@ -19,11 +22,24 @@ struct CardView: View {
         }
         .frame(width: cardWidth,height: cardHeight)
         .clipShape(RoundedRectangle( cornerRadius:10))
+        .offset(x: xOffset)
+      //  .opacity(cardOpacity)
+        .rotationEffect(.degrees(degrees))
+        .gesture(
+            DragGesture().onChanged({
+                value in
+                withAnimation(.snappy){
+                    xOffset = value.translation.width
+                    degrees = Double(value.translation.width/25)
+                    //cardOpacity = Double(value.translation.width/10000)
+                }
+            }
+        ))
     }
     
    
 }
-private extension CardView {
+ extension CardView {
    
     var cardWidth: CGFloat {
       UIScreen.main.bounds.width-20
