@@ -21,6 +21,7 @@
 		D48A7BA92C3DAFD600D3EDF7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D48A7BA82C3DAFD600D3EDF7 /* FirebaseAnalytics */; };
 		D48A7BAB2C3DAFD600D3EDF7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D48A7BAA2C3DAFD600D3EDF7 /* FirebaseAuth */; };
 		D48A7BAD2C3DAFD600D3EDF7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D48A7BAC2C3DAFD600D3EDF7 /* FirebaseDatabase */; };
+		D48A7BB22C3EFBAB00D3EDF7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		D48A7BA22C3DACBD00D3EDF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D48A7BA42C3DAD0C00D3EDF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D48A7BA62C3DAFB400D3EDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		D48A7B622C39D08F00D3EDF7 /* Stylor */ = {
 			isa = PBXGroup;
 			children = (
+				D48A7BB02C3EFB9500D3EDF7 /* Auth */,
 				D48A7BA62C3DAFB400D3EDF7 /* Info.plist */,
 				D48A7B912C39D12F00D3EDF7 /* Utils */,
 				D48A7B902C39D12700D3EDF7 /* Shared */,
@@ -243,6 +246,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D48A7BB02C3EFB9500D3EDF7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48A7BB22C3EFBAB00D3EDF7 /* LoginViewController.swift in Sources */,
 				D48A7B662C39D08F00D3EDF7 /* ContentView.swift in Sources */,
 				D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */,
 				D48A7B9C2C39DACF00D3EDF7 /* CardView.swift in Sources */,
