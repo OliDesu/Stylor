@@ -22,6 +22,7 @@
 		D48A7BAB2C3DAFD600D3EDF7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D48A7BAA2C3DAFD600D3EDF7 /* FirebaseAuth */; };
 		D48A7BAD2C3DAFD600D3EDF7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D48A7BAC2C3DAFD600D3EDF7 /* FirebaseDatabase */; };
 		D48A7BB22C3EFBAB00D3EDF7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */; };
+		D48A7BB42C40846F00D3EDF7 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7BB32C40846F00D3EDF7 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		D48A7BA42C3DAD0C00D3EDF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D48A7BA62C3DAFB400D3EDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D48A7BB32C40846F00D3EDF7 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */,
+				D48A7BB32C40846F00D3EDF7 /* RegisterView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				D48A7BB22C3EFBAB00D3EDF7 /* LoginViewController.swift in Sources */,
 				D48A7B662C39D08F00D3EDF7 /* ContentView.swift in Sources */,
 				D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */,
+				D48A7BB42C40846F00D3EDF7 /* RegisterView.swift in Sources */,
 				D48A7B9C2C39DACF00D3EDF7 /* CardView.swift in Sources */,
 				D48A7B9A2C39D22C00D3EDF7 /* MainTabView.swift in Sources */,
 				D48A7B9F2C39DE3D00D3EDF7 /* UserInfoView.swift in Sources */,
