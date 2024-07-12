@@ -4,11 +4,13 @@
 //
 //  Created by Ali El Mufti on 11/07/2024.
 //
+
 import SwiftUI
 import FirebaseAuth
 
 struct RegisterView: View {
     @StateObject private var viewModel = RegisterViewModel()
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
@@ -22,7 +24,9 @@ struct RegisterView: View {
                 .padding()
             
             Button(action: {
-                viewModel.register()
+                viewModel.register {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
             }) {
                 Text("Register")
                     .padding()
@@ -47,7 +51,7 @@ class RegisterViewModel: ObservableObject {
     @Published var password = ""
     @Published var errorMessage: String?
     
-    func register() {
+    func register(onSuccess: @escaping () -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 self.errorMessage = error.localizedDescription
@@ -55,6 +59,7 @@ class RegisterViewModel: ObservableObject {
                 // Handle successful registration
                 self.errorMessage = nil
                 print("User registered successfully: \(authResult?.user.email ?? "")")
+                onSuccess()
             }
         }
     }
