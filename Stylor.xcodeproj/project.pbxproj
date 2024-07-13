@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */; };
-		D48A7B662C39D08F00D3EDF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B652C39D08F00D3EDF7 /* ContentView.swift */; };
+		D48A7B662C39D08F00D3EDF7 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B652C39D08F00D3EDF7 /* AuthenticationView.swift */; };
 		D48A7B682C39D09000D3EDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48A7B672C39D09000D3EDF7 /* Assets.xcassets */; };
 		D48A7B6B2C39D09000D3EDF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48A7B6A2C39D09000D3EDF7 /* Preview Assets.xcassets */; };
 		D48A7B752C39D09000D3EDF7 /* StylorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B742C39D09000D3EDF7 /* StylorTests.swift */; };
@@ -45,7 +45,7 @@
 /* Begin PBXFileReference section */
 		D48A7B602C39D08F00D3EDF7 /* Stylor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stylor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylorApp.swift; sourceTree = "<group>"; };
-		D48A7B652C39D08F00D3EDF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D48A7B652C39D08F00D3EDF7 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		D48A7B672C39D09000D3EDF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48A7B6A2C39D09000D3EDF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D48A7B702C39D09000D3EDF7 /* StylorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StylorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */,
-				D48A7B652C39D08F00D3EDF7 /* ContentView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -253,6 +252,7 @@
 		D48A7BB02C3EFB9500D3EDF7 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				D48A7B652C39D08F00D3EDF7 /* AuthenticationView.swift */,
 				D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */,
 				D48A7BB32C40846F00D3EDF7 /* RegisterView.swift */,
 			);
@@ -399,7 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48A7BB22C3EFBAB00D3EDF7 /* LoginViewController.swift in Sources */,
-				D48A7B662C39D08F00D3EDF7 /* ContentView.swift in Sources */,
+				D48A7B662C39D08F00D3EDF7 /* AuthenticationView.swift in Sources */,
 				D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */,
 				D48A7BB42C40846F00D3EDF7 /* RegisterView.swift in Sources */,
 				D48A7B9C2C39DACF00D3EDF7 /* CardView.swift in Sources */,

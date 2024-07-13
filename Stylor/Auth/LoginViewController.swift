@@ -79,7 +79,7 @@ class LoginViewController: UIViewController {
 
         var body: some View {
             if isLoggedIn {
-                ContentView()
+                MainTabView()
             } else {
                 LoginViewControllerWrapper(isLoggedIn: $isLoggedIn)
             }

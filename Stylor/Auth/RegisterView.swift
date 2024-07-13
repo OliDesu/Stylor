@@ -13,7 +13,7 @@ struct RegisterView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack {
+        VStack{
             TextField("Email", text: $viewModel.email)
                 .autocapitalization(.none)
                 .textFieldStyle(RoundedBorderTextFieldStyle())

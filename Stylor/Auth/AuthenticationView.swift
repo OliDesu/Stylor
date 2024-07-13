@@ -8,21 +8,24 @@ struct AuthenticationView: View {
     var body: some View {
         VStack {
             if isLoggedIn {
-                Text("Welcome to the Content View")
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                NavigationView {
+                  MainTabView()
+                }
             } else {
-                VStack {
+                VStack(alignment: .center) {
+                    Text("🎨🪡🦹🏻").font(.system(size: 100))
                     Button(action: {
                         showLogin = true
                     }) {
-                        Text("Login")
+                        Text("Se connecter").foregroundColor(.black)
                             .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                            .font(.system(size: 16, weight: .semibold))
+                                            .frame(maxWidth: .infinity, minHeight: 52)
+                                            .cornerRadius(15)
+                                            .overlay {
+                                                RoundedRectangle(cornerRadius: 15)
+                                                    .stroke(Color.black)
+                                            }
                     }
                     .sheet(isPresented: $showLogin) {
                         LoginViewControllerWrapper(isLoggedIn: $isLoggedIn)
@@ -31,19 +34,26 @@ struct AuthenticationView: View {
                     Button(action: {
                         showRegister = true
                     }) {
-                        Text("Register")
+                        Text("Créer un compte").foregroundColor(.black)
                             .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                                .font(.system(size: 16, weight: .semibold))
+                            .frame(maxWidth: .infinity, minHeight: 52)
+                            .cornerRadius(15)
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(Color.black)
+                            }
                     }
                     .sheet(isPresented: $showRegister) {
                         RegisterView()
                     }
                 }
             }
-        }
+            }
+
+        
         .padding()
+        .frame(maxHeight: .infinity)
     }
 }
 

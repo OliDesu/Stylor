@@ -30,9 +30,10 @@ struct YourApp: App {
   var body: some Scene {
     WindowGroup {
       NavigationView {
-        ContentView()
+        AuthenticationView()
       }
-    }
+    }.environment(\.colorScheme, .dark) // or `.dark`
+
   }
 }
 
