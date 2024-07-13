@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct AuthenticationView: View {
     @State private var showLogin = false
     @State private var showRegister = false
     @State private var isLoggedIn = false
@@ -49,7 +49,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AuthenticationView()
     }
 }
 
