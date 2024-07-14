@@ -13,22 +13,26 @@ struct AuthenticationView: View {
                 }
             } else {
                 VStack(alignment: .center) {
-                    Text("🎨🪡🦹🏻").font(.system(size: 100))
-                    Button(action: {
-                        showLogin = true
-                    }) {
-                        Text("Se connecter").foregroundColor(.black)
-                            .padding()
-                            .font(.system(size: 16, weight: .semibold))
-                                            .frame(maxWidth: .infinity, minHeight: 52)
-                                            .cornerRadius(15)
-                                            .overlay {
-                                                RoundedRectangle(cornerRadius: 15)
-                                                    .stroke(Color.black)
-                                            }
+                    Group {
+                        Text("🎨🪡🦹🏻").font(.system(size: 70))
                     }
-                    .sheet(isPresented: $showLogin) {
-                        LoginViewControllerWrapper(isLoggedIn: $isLoggedIn)
+                    Group {
+                        Button(action: {
+                            showLogin = true
+                        }) {
+                            Text("Se connecter").foregroundColor(.black)
+                                .padding()
+                                .font(.system(size: 16, weight: .semibold))
+                                                .frame(maxWidth: .infinity, minHeight: 52)
+                                                .cornerRadius(15)
+                                                .overlay {
+                                                    RoundedRectangle(cornerRadius: 15)
+                                                        .stroke(Color.black)
+                                                }
+                        }
+                        .sheet(isPresented: $showLogin) {
+                            LoginViewControllerWrapper(isLoggedIn: $isLoggedIn)
+                    }
                     }
                     
                     Button(action: {

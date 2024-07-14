@@ -25,22 +25,39 @@ struct CardView: View {
         .offset(x: xOffset)
       //  .opacity(cardOpacity)
         .rotationEffect(.degrees(degrees))
+        .animation(.snappy, value: xOffset)
         .gesture(
             DragGesture().onChanged({
                 value in
-                withAnimation(.snappy){
                     xOffset = value.translation.width
                     degrees = Double(value.translation.width/25)
+                    print(degrees)
                     //cardOpacity = Double(value.translation.width/10000)
-                }
-            }
-        ))
+                    
+                
+            }).onEnded({
+                value in
+                onDragEnded(value)
+            })
+                                   )
     }
     
    
 }
- extension CardView {
-   
+private extension CardView{
+    func onDragEnded(_ value: _ChangedGesture<DragGesture>.Value){
+        let width = value.translation.width
+        if abs(width) <= abs(screenCutOff) {
+            xOffset = 0
+            degrees = 0
+        }
+    }
+}
+extension CardView {
+    var screenCutOff: CGFloat {
+        (UIScreen.main.bounds.width / 2) *  0.8
+
+    }
     var cardWidth: CGFloat {
       UIScreen.main.bounds.width-20
   }
