@@ -27,24 +27,21 @@ struct CardView: View {
         .rotationEffect(.degrees(degrees))
         .animation(.snappy, value: xOffset)
         .gesture(
-            DragGesture().onChanged({
-                value in
-                    xOffset = value.translation.width
-                    degrees = Double(value.translation.width/25)
-                    print(degrees)
-                    //cardOpacity = Double(value.translation.width/10000)
-                    
-                
-            }).onEnded({
-                value in
-                onDragEnded(value)
-            })
+            DragGesture().onChanged(
+                onDragChanged
+            ).onEnded(
+                onDragEnded
+            )
                                    )
     }
     
    
 }
 private extension CardView{
+    func onDragChanged(_ value: _ChangedGesture<DragGesture>.Value){
+        xOffset = value.translation.width
+        degrees = Double(value.translation.width/25)
+    }
     func onDragEnded(_ value: _ChangedGesture<DragGesture>.Value){
         let width = value.translation.width
         if abs(width) <= abs(screenCutOff) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D47983302C4482E80077746A /* SwipeActionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */; };
 		D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */; };
 		D48A7B662C39D08F00D3EDF7 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B652C39D08F00D3EDF7 /* AuthenticationView.swift */; };
 		D48A7B682C39D09000D3EDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48A7B672C39D09000D3EDF7 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionIndicatorView.swift; sourceTree = "<group>"; };
 		D48A7B602C39D08F00D3EDF7 /* Stylor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stylor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylorApp.swift; sourceTree = "<group>"; };
 		D48A7B652C39D08F00D3EDF7 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			children = (
 				D48A7B9B2C39DACF00D3EDF7 /* CardView.swift */,
 				D48A7B9E2C39DE3D00D3EDF7 /* UserInfoView.swift */,
+				D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				D48A7B9C2C39DACF00D3EDF7 /* CardView.swift in Sources */,
 				D48A7B9A2C39D22C00D3EDF7 /* MainTabView.swift in Sources */,
 				D48A7B9F2C39DE3D00D3EDF7 /* UserInfoView.swift in Sources */,
+				D47983302C4482E80077746A /* SwipeActionIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
