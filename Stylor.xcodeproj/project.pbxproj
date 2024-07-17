@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		D47983302C4482E80077746A /* SwipeActionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */; };
 		D47983332C46A2CE0077746A /* SizeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983322C46A2CE0077746A /* SizeConstants.swift */; };
+		D47983352C4702DB0077746A /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983342C4702DB0077746A /* CardStackView.swift */; };
+		D479833C2C4720D10077746A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479833B2C4720D10077746A /* User.swift */; };
+		D479833E2C47212D0077746A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479833D2C47212D0077746A /* Card.swift */; };
+		D47983412C4721F00077746A /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983402C4721F00077746A /* CardViewModel.swift */; };
+		D47983442C4726C70077746A /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983432C4726C70077746A /* CardService.swift */; };
+		D47983472C472E110077746A /* CardMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983462C472E110077746A /* CardMock.swift */; };
+		D47983492C47EBB10077746A /* ImageScrollingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983482C47EBB10077746A /* ImageScrollingOverlay.swift */; };
 		D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */; };
 		D48A7B662C39D08F00D3EDF7 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B652C39D08F00D3EDF7 /* AuthenticationView.swift */; };
 		D48A7B682C39D09000D3EDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48A7B672C39D09000D3EDF7 /* Assets.xcassets */; };
@@ -47,6 +54,13 @@
 /* Begin PBXFileReference section */
 		D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionIndicatorView.swift; sourceTree = "<group>"; };
 		D47983322C46A2CE0077746A /* SizeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeConstants.swift; sourceTree = "<group>"; };
+		D47983342C4702DB0077746A /* CardStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
+		D479833B2C4720D10077746A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D479833D2C47212D0077746A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D47983402C4721F00077746A /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		D47983432C4726C70077746A /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
+		D47983462C472E110077746A /* CardMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMock.swift; sourceTree = "<group>"; };
+		D47983482C47EBB10077746A /* ImageScrollingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollingOverlay.swift; sourceTree = "<group>"; };
 		D48A7B602C39D08F00D3EDF7 /* Stylor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stylor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylorApp.swift; sourceTree = "<group>"; };
 		D48A7B652C39D08F00D3EDF7 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -103,6 +117,39 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		D479833A2C4720C30077746A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D479833B2C4720D10077746A /* User.swift */,
+				D479833D2C47212D0077746A /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D479833F2C4721DC0077746A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D47983402C4721F00077746A /* CardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D47983422C4722610077746A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D47983432C4726C70077746A /* CardService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D47983452C472E040077746A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D47983462C472E110077746A /* CardMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		D48A7B572C39D08F00D3EDF7 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +175,8 @@
 		D48A7B622C39D08F00D3EDF7 /* Stylor */ = {
 			isa = PBXGroup;
 			children = (
+				D47983452C472E040077746A /* Mocks */,
+				D47983422C4722610077746A /* Services */,
 				D48A7BB02C3EFB9500D3EDF7 /* Auth */,
 				D48A7BA62C3DAFB400D3EDF7 /* Info.plist */,
 				D48A7B912C39D12F00D3EDF7 /* Utils */,
@@ -196,6 +245,7 @@
 		D48A7B902C39D12700D3EDF7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D479833A2C4720C30077746A /* Models */,
 				D48A7BA42C3DAD0C00D3EDF7 /* GoogleService-Info.plist */,
 			);
 			path = Shared;
@@ -234,6 +284,7 @@
 		D48A7B952C39D19500D3EDF7 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				D479833F2C4721DC0077746A /* ViewModel */,
 				D48A7B9D2C39DE1D00D3EDF7 /* Views */,
 			);
 			path = Cards;
@@ -252,6 +303,8 @@
 				D48A7B9B2C39DACF00D3EDF7 /* CardView.swift */,
 				D48A7B9E2C39DE3D00D3EDF7 /* UserInfoView.swift */,
 				D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */,
+				D47983342C4702DB0077746A /* CardStackView.swift */,
+				D47983482C47EBB10077746A /* ImageScrollingOverlay.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -413,14 +466,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48A7BB22C3EFBAB00D3EDF7 /* LoginViewController.swift in Sources */,
+				D47983442C4726C70077746A /* CardService.swift in Sources */,
 				D48A7B662C39D08F00D3EDF7 /* AuthenticationView.swift in Sources */,
 				D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */,
 				D48A7BB42C40846F00D3EDF7 /* RegisterView.swift in Sources */,
 				D48A7B9C2C39DACF00D3EDF7 /* CardView.swift in Sources */,
+				D47983472C472E110077746A /* CardMock.swift in Sources */,
+				D47983352C4702DB0077746A /* CardStackView.swift in Sources */,
+				D47983492C47EBB10077746A /* ImageScrollingOverlay.swift in Sources */,
 				D48A7B9A2C39D22C00D3EDF7 /* MainTabView.swift in Sources */,
+				D479833E2C47212D0077746A /* Card.swift in Sources */,
+				D47983412C4721F00077746A /* CardViewModel.swift in Sources */,
 				D48A7B9F2C39DE3D00D3EDF7 /* UserInfoView.swift in Sources */,
 				D47983302C4482E80077746A /* SwipeActionIndicatorView.swift in Sources */,
 				D47983332C46A2CE0077746A /* SizeConstants.swift in Sources */,
+				D479833C2C4720D10077746A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
