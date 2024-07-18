@@ -4,13 +4,12 @@
 //
 //  Created by Ali El Mufti on 16/07/2024.
 //
-
 import Foundation
 
-struct Card {
+struct Card: Identifiable {
     let user: User
-}
-
-extension Card: Identifiable {
-    var id: String {return user.id}
+    
+    var id: String {
+        return user.id ?? UUID().uuidString // Generate a temporary ID if user.id is nil
+    }
 }
