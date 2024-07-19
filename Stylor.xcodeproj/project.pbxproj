@@ -32,7 +32,7 @@
 		D48A7BAB2C3DAFD600D3EDF7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D48A7BAA2C3DAFD600D3EDF7 /* FirebaseAuth */; };
 		D48A7BAD2C3DAFD600D3EDF7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D48A7BAC2C3DAFD600D3EDF7 /* FirebaseDatabase */; };
 		D48A7BB22C3EFBAB00D3EDF7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */; };
-		D48A7BB42C40846F00D3EDF7 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7BB32C40846F00D3EDF7 /* RegisterView.swift */; };
+		D48A7BB42C40846F00D3EDF7 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7BB32C40846F00D3EDF7 /* RegisterViewModel.swift */; };
 		D49EA5152C496AF100097B49 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D49EA5142C496AF100097B49 /* FirebaseAnalytics */; };
 		D49EA5172C496AF100097B49 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D49EA5162C496AF100097B49 /* FirebaseAnalyticsOnDeviceConversion */; };
 		D49EA5192C496AF100097B49 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D49EA5182C496AF100097B49 /* FirebaseAnalyticsSwift */; };
@@ -50,6 +50,10 @@
 		D49EA5312C496AF100097B49 /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D49EA5302C496AF100097B49 /* FirebaseFunctionsCombine-Community */; };
 		D49EA5332C496AF100097B49 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D49EA5322C496AF100097B49 /* FirebaseInAppMessaging-Beta */; };
 		D49EA5352C4979D300097B49 /* ConvertionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA5342C4979D300097B49 /* ConvertionUtils.swift */; };
+		D49EA5382C49D64200097B49 /* NameAgeRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA5372C49D64200097B49 /* NameAgeRegistration.swift */; };
+		D49EA53A2C49D66500097B49 /* MailPasswordRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA5392C49D66500097B49 /* MailPasswordRegistration.swift */; };
+		D49EA53C2C49D67700097B49 /* PicturesRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA53B2C49D67700097B49 /* PicturesRegistration.swift */; };
+		D49EA5402C4AAA5D00097B49 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA53F2C4AAA5D00097B49 /* LandingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,8 +101,12 @@
 		D48A7BA42C3DAD0C00D3EDF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D48A7BA62C3DAFB400D3EDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D48A7BB32C40846F00D3EDF7 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		D48A7BB32C40846F00D3EDF7 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D49EA5342C4979D300097B49 /* ConvertionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertionUtils.swift; sourceTree = "<group>"; };
+		D49EA5372C49D64200097B49 /* NameAgeRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAgeRegistration.swift; sourceTree = "<group>"; };
+		D49EA5392C49D66500097B49 /* MailPasswordRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailPasswordRegistration.swift; sourceTree = "<group>"; };
+		D49EA53B2C49D67700097B49 /* PicturesRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesRegistration.swift; sourceTree = "<group>"; };
+		D49EA53F2C4AAA5D00097B49 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,11 +365,23 @@
 		D48A7BB02C3EFB9500D3EDF7 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				D49EA5362C49D5B900097B49 /* RegistrationProcess */,
 				D48A7B652C39D08F00D3EDF7 /* AuthenticationView.swift */,
 				D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */,
-				D48A7BB32C40846F00D3EDF7 /* RegisterView.swift */,
+				D49EA53F2C4AAA5D00097B49 /* LandingView.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		D49EA5362C49D5B900097B49 /* RegistrationProcess */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7BB32C40846F00D3EDF7 /* RegisterViewModel.swift */,
+				D49EA5372C49D64200097B49 /* NameAgeRegistration.swift */,
+				D49EA5392C49D66500097B49 /* MailPasswordRegistration.swift */,
+				D49EA53B2C49D67700097B49 /* PicturesRegistration.swift */,
+			);
+			path = RegistrationProcess;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,7 +545,8 @@
 				D47983442C4726C70077746A /* CardService.swift in Sources */,
 				D48A7B662C39D08F00D3EDF7 /* AuthenticationView.swift in Sources */,
 				D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */,
-				D48A7BB42C40846F00D3EDF7 /* RegisterView.swift in Sources */,
+				D48A7BB42C40846F00D3EDF7 /* RegisterViewModel.swift in Sources */,
+				D49EA53C2C49D67700097B49 /* PicturesRegistration.swift in Sources */,
 				D48A7B9C2C39DACF00D3EDF7 /* CardView.swift in Sources */,
 				D479834B2C4805970077746A /* UserService.swift in Sources */,
 				D47983472C472E110077746A /* CardMock.swift in Sources */,
@@ -534,10 +555,13 @@
 				D48A7B9A2C39D22C00D3EDF7 /* MainTabView.swift in Sources */,
 				D479833E2C47212D0077746A /* Card.swift in Sources */,
 				D47983412C4721F00077746A /* CardViewModel.swift in Sources */,
+				D49EA5382C49D64200097B49 /* NameAgeRegistration.swift in Sources */,
+				D49EA53A2C49D66500097B49 /* MailPasswordRegistration.swift in Sources */,
 				D48A7B9F2C39DE3D00D3EDF7 /* UserInfoView.swift in Sources */,
 				D49EA5352C4979D300097B49 /* ConvertionUtils.swift in Sources */,
 				D47983302C4482E80077746A /* SwipeActionIndicatorView.swift in Sources */,
 				D47983332C46A2CE0077746A /* SizeConstants.swift in Sources */,
+				D49EA5402C4AAA5D00097B49 /* LandingView.swift in Sources */,
 				D479833C2C4720D10077746A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
