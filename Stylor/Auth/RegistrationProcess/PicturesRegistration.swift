@@ -16,11 +16,12 @@ struct PicturesRegistration: View {
             "Smile"
         )
         Spacer()
+        
         Button ("Finish"){
             viewModel.register(){
-                path = NavigationPath()
-
                 }
+            path.removeLast(path.count)
+
             }
         if let errorMessage = viewModel.errorMessage {
             Text(

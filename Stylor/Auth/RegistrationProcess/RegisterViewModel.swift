@@ -21,7 +21,16 @@ public class RegisterViewModel: ObservableObject {
     )
     
     
-    
+    private func resetForm() {
+        self.email = ""
+        self.password = ""
+        self.errorMessage=""
+        self.name = ""
+        self.surname = ""
+        self.age  = Date(
+            timeIntervalSinceNow: 0
+        )
+    }
     func register(
         onSuccess: @escaping () -> Void
     ) {
@@ -53,6 +62,7 @@ public class RegisterViewModel: ObservableObject {
                 print(
                     "User registered successfully: \(authResult?.user.email ?? "")"
                 )
+                self.resetForm()
                 onSuccess()
             }
         }

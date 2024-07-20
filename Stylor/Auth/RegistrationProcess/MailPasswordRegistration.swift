@@ -12,11 +12,7 @@ struct MailPasswordRegistration: View {
     @Binding var path: NavigationPath
 
     var body: some View {
-        Text(
-            "You will use it later to connect"
-        )
-        
-        Spacer()
+    
         TextField(
             "Email",
             text: $viewModel.email
