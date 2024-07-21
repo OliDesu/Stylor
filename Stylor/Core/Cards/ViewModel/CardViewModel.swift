@@ -9,10 +9,10 @@ import Foundation
 
 class CardViewModel: ObservableObject {
     @Published var cardModels = [Card]()
-    private let service: CardService
+    private let service: CardApiService
     
     init(
-        service: CardService
+        service: CardApiService
     ){
         self.service = service
         Task {

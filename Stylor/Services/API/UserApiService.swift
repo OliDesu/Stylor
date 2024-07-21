@@ -4,7 +4,7 @@ import FirebaseFirestore
 
 // Define your User model
 
-class UserService {
+class UserApiService {
      let db = Firestore.firestore()
 
     public func addUser(user: User) {
@@ -13,7 +13,7 @@ class UserService {
             "name": user.name,
             "surname": user.surname,
             "age": user.age,
-            "profileImagesURLs": user.profileImagesURLs
+            "userPortfolioImages": user.userPortfolioImages
         ]
 
         db.collection("users").document().setData(userData) { error in

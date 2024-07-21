@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CardService {
+struct CardApiService {
     func fetchCardModels() async throws -> [Card]{
         let users = MockData.users
         return users.map({

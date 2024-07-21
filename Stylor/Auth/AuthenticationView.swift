@@ -6,6 +6,7 @@ struct AuthenticationView: View {
     @State private var isLoggedIn = false
     @StateObject var viewModel: RegisterViewModel = RegisterViewModel()
     @State private var path = NavigationPath()
+    
     var body: some View {
         VStack {
             if isLoggedIn {
@@ -37,24 +38,7 @@ struct AuthenticationView: View {
                             default:
                                 Text("Unknown View")
                             }
-                      /*  NavigationLink {
-                            NameAgeRegistration(
-                                path: $path
-                            ).environmentObject(self.viewModel).navigationDestination(item: <#T##Binding<Optional<Hashable>>#>, destination: <#T##(Hashable) -> View#>)
-
-                        } label: {
-                            Text(
-                                "S'enregistrer"
-                            )
-                        }
-                        
-                        NavigationLink {
-                       LoginViewControllerWrapper(isLoggedIn:$isLoggedIn)
-                        } label: {
-                            Text(
-                                "Se connecter"
-                            )
-                        }*/
+            
                         
                         
                         }

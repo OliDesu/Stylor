@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardStackView: View {
     @StateObject var viewModel = CardViewModel(
-        service: CardService()
+        service: CardApiService()
     )
     var body: some View {
         ZStack{

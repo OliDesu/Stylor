@@ -9,61 +9,57 @@ import SwiftUI
 import FirebaseAuth
 
 
+import SwiftUI
+import FirebaseAuth
+
 public class RegisterViewModel: ObservableObject {
-    
     @Published var email = ""
     @Published var password = ""
     @Published var errorMessage: String?
     @Published var name: String = ""
     @Published var surname: String = ""
-    @Published var age : Date = Date(
-        timeIntervalSinceNow: 0
-    )
-    
+    @Published var age: Date = Date()
+    @Published var isRegisteredComplete: Bool = false
     
     private func resetForm() {
         self.email = ""
         self.password = ""
-        self.errorMessage=""
+        self.errorMessage = nil
         self.name = ""
         self.surname = ""
-        self.age  = Date(
-            timeIntervalSinceNow: 0
-        )
+        self.age = Date()
     }
-    func register(
-        onSuccess: @escaping () -> Void
-    ) {
-        let  userService = UserService()
-        let user: User = User(
+    
+    func register(onSuccess: @escaping () -> Void) {
+        let userService = UserApiService()
+        let user = User(
             id: UUID().uuidString,
             name: name,
             surname: surname,
             age: age,
             profileImagesURLs: []
         )
-        print(
-            user
-        )
-        userService.addUser(
-            user: user
-        )
-        Auth.auth().createUser(
-            withEmail: email,
-            password: password
-        ) {
-            authResult,
-            error in
+
+        print(user)
+        userService.addUser(user: user)
+        
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
-                self.errorMessage = error.localizedDescription
+                DispatchQueue.main.async {
+                    self.errorMessage = error.localizedDescription
+                    self.isRegisteredComplete = false
+                }
             } else {
-                // Handle successful registration
-                self.errorMessage = nil
-                print(
-                    "User registered successfully: \(authResult?.user.email ?? "")"
-                )
-                self.resetForm()
-                onSuccess()
+                DispatchQueue.main.async {
+                    // Handle successful registration
+                    self.errorMessage = nil
+                    print("User registered successfully: \(authResult?.user.email ?? "")")
+                    UserDataService.shared.setCurrentUser(user)
+
+                    self.resetForm()
+                    self.isRegisteredComplete = true
+                    onSuccess()
+                }
             }
         }
     }

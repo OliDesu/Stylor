@@ -13,7 +13,7 @@ struct User: Identifiable {
     let name: String
     let surname:String
     var age: Date
-    var profileImagesURLs: [String]
+    var userPortfolioImages: [String]
     
     init(
         id: String? = nil,
@@ -26,6 +26,6 @@ struct User: Identifiable {
          self.name = name
          self.surname = surname
          self.age = age
-         self.profileImagesURLs = profileImagesURLs
+         self.userPortfolioImages = profileImagesURLs
      }
 }

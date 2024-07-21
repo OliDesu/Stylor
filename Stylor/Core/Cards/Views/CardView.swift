@@ -22,7 +22,7 @@ struct CardView: View {
                 alignment:.top
             ) {
                 Image(
-                    model.user.profileImagesURLs[currentImageIndex]
+                    model.user.userPortfolioImages[currentImageIndex]
                 )
                 .resizable()
                 .overlay {
@@ -81,7 +81,7 @@ private extension CardView {
         return model.user
     }
     var imageCount: Int {
-        return user.profileImagesURLs.count
+        return user.userPortfolioImages.count
     }
 }
 private extension CardView {
