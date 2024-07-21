@@ -25,7 +25,7 @@ class ImageApiService: ObservableObject {
             return
         }
         
-        let storageRef = Storage.storage().reference().child("userProfileImages").child(userId).child(UUID().uuidString)
+        let storageRef = Storage.storage().reference().child("userPortfolioImages").child(userId).child(UUID().uuidString)
         guard let imageData = image.jpegData(compressionQuality: 0.8) else {
             completion(.failure(NSError(domain: "ImageConversionError", code: -1, userInfo: nil)))
             return
@@ -56,11 +56,13 @@ class ImageApiService: ObservableObject {
     func updateUserProfileImage(image: UIImage) {
         uploadImage(image: image) { [weak self] result in
             guard let self = self else { return }
-            
+
             switch result {
             case .success(let url):
+                print(url)
                 self.user.userPortfolioImages.append(url)
-                self.updateUserInDatabase()
+                print(user)
+                self.updateUserImageInDatabase()
             case .failure(let error):
                 print("Failed to upload image: \(error)")
             }
@@ -68,11 +70,11 @@ class ImageApiService: ObservableObject {
     }
     
     // Function to update user in Firestore
-    private func updateUserInDatabase() {
+    private func updateUserImageInDatabase() {
         guard let userId = user.id else { return }
         
         let db = Firestore.firestore()
-        let userRef = db.collection("users").document(userId)
+        let userRef = db.collection("users").document(userId) // Use .document(userId) to get a DocumentReference
         
         userRef.updateData(["userPortfolioImages": self.user.userPortfolioImages]) { error in
             if let error = error {
@@ -82,4 +84,5 @@ class ImageApiService: ObservableObject {
             }
         }
     }
+
 }

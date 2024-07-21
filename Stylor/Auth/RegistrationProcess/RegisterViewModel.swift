@@ -37,7 +37,7 @@ public class RegisterViewModel: ObservableObject {
             name: name,
             surname: surname,
             age: age,
-            profileImagesURLs: []
+            userPortfolioImages: []
         )
 
         print(user)

@@ -20,12 +20,12 @@ struct User: Identifiable {
         name: String,
         surname: String,
         age: Date,
-        profileImagesURLs: [String] = []
+        userPortfolioImages: [String] = []
     ) {
          self.id = id
          self.name = name
          self.surname = surname
          self.age = age
-         self.userPortfolioImages = profileImagesURLs
+         self.userPortfolioImages = userPortfolioImages
      }
 }

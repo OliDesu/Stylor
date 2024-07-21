@@ -16,7 +16,7 @@ class UserApiService {
             "userPortfolioImages": user.userPortfolioImages
         ]
 
-        db.collection("users").document().setData(userData) { error in
+        db.collection("users").document(user.id!).setData(userData) { error in
             if let error = error {
                 print("Error adding user: \(error)")
             } else {
@@ -24,6 +24,7 @@ class UserApiService {
             }
         }
     }
+    
 }
 
 
