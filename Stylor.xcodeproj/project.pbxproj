@@ -60,6 +60,7 @@
 		D49EA5482C4BC67700097B49 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D49EA5472C4BC67700097B49 /* FirebaseStorageCombine-Community */; };
 		D49EA54C2C4D7E3600097B49 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA54B2C4D7E3600097B49 /* UserDataService.swift */; };
 		D49EA54F2C4D97AF00097B49 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA54E2C4D97AF00097B49 /* SpinnerView.swift */; };
+		D49EA5522C5034A100097B49 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA5512C5034A100097B49 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		D49EA5412C4BC58800097B49 /* ImageApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageApiService.swift; sourceTree = "<group>"; };
 		D49EA54B2C4D7E3600097B49 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		D49EA54E2C4D97AF00097B49 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		D49EA5512C5034A100097B49 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 		D47983422C4722610077746A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D49EA5502C50348F00097B49 /* ImagePickers */,
 				D49EA54A2C4D7CE800097B49 /* Data */,
 				D49EA5492C4D7CDA00097B49 /* API */,
 			);
@@ -423,6 +426,14 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		D49EA5502C50348F00097B49 /* ImagePickers */ = {
+			isa = PBXGroup;
+			children = (
+				D49EA5512C5034A100097B49 /* ImagePicker.swift */,
+			);
+			path = ImagePickers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -596,6 +607,7 @@
 				D47983472C472E110077746A /* CardMock.swift in Sources */,
 				D47983352C4702DB0077746A /* CardStackView.swift in Sources */,
 				D47983492C47EBB10077746A /* ImageScrollingOverlay.swift in Sources */,
+				D49EA5522C5034A100097B49 /* ImagePicker.swift in Sources */,
 				D48A7B9A2C39D22C00D3EDF7 /* MainTabView.swift in Sources */,
 				D479833E2C47212D0077746A /* Card.swift in Sources */,
 				D47983412C4721F00077746A /* CardViewModel.swift in Sources */,

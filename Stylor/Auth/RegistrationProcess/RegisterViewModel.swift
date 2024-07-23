@@ -5,8 +5,6 @@
 //  Created by Ali El Mufti on 11/07/2024.
 //
 
-import SwiftUI
-import FirebaseAuth
 
 
 import SwiftUI
@@ -30,6 +28,8 @@ public class RegisterViewModel: ObservableObject {
         self.age = Date()
     }
     
+
+    
     func register(onSuccess: @escaping () -> Void) {
         let userService = UserApiService()
         let user = User(
@@ -39,8 +39,6 @@ public class RegisterViewModel: ObservableObject {
             age: age,
             userPortfolioImages: []
         )
-
-        print(user)
         userService.addUser(user: user)
         
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in

@@ -1,136 +1,60 @@
-//
-//  PicturesRegistration.swift
-//  Stylor
-//
-//  Created by Ali El Mufti on 19/07/2024.
-//
-
+import SwiftUI
+import PhotosUI
 import SwiftUI
 
 struct PicturesRegistration: View {
     @EnvironmentObject var viewModel: RegisterViewModel
+    @State private var showImagePicker = false
+    @State private var selectedImages: [UIImage] = []
     @Binding var path: NavigationPath
-    @StateObject private var imageService = ImageApiService(
-        user: UserDataService.shared.getCurrentUser()!
-    )
-    @State private var selectedImage: [UIImage] = []
-    @State private var showingImagePicker = false
+    let userService = UserApiService()
+
     var body: some View {
-        Text(
-            "Select the pictures of your portfolio"
-        )
-        Spacer()
         VStack {
-            if let selectedImage = selectedImage {
-                Images(
-                    uiImage: selectedImage
-                )
-                .resizable()
-                .scaledToFit()
-                .frame(
-                    width: 200,
-                    height: 200
-                )
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(selectedImages, id: \.self) { image in
+                        Image(uiImage: image)
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                    }
+                }
             }
             
-            Button(
-                "Select Image"
-            ) {
-                showingImagePicker = true
-            }
-            .sheet(
-                isPresented: $showingImagePicker
-            ) {
-                ImagePicker(
-                    image: $selectedImage
-                )
+            Button(action: {
+                showImagePicker.toggle()
+            }) {
+                Text("Select Images")
             }
             
-        }
-        Button (
-            "Finish"
-        ){ if let image = selectedImage {
-            imageService.updateUserProfileImage(
-                image: image
-            )
-            path.removeLast(
-                path.count
-            )
-        }
-            if let errorMessage = viewModel.errorMessage {
-                Text(
-                    errorMessage
-                )
-                .foregroundColor(
-                    .red
-                )
-                .padding()
+            Button(action: {
+                if !selectedImages.isEmpty {
+                    let imageApiService = ImageApiService(user:
+                UserDataService.shared.getCurrentUser())  // Ensure the correct user instance is passed
+                    imageApiService.uploadImages(images: selectedImages) { result in
+                        switch result {
+                        case .success(let urls):
+                            var currentUser = UserDataService.shared.getCurrentUser();
+                            currentUser.userPortfolioImages.append(contentsOf: urls)
+                            UserDataService.shared.setCurrentUser(currentUser)
+                            userService.updateUserImagesInDatabase()
+                            path.removeLast(
+                                path.count
+                            )
+                        case .failure(let error):
+                            print("Failed to upload images: \(error)")
+                        }
+                    }
+                }
+            }) {
+                Text("Upload Images")
             }
+        }
+        .sheet(isPresented: $showImagePicker) {
+            ImagePicker(images: $selectedImages)  // This assumes you have a custom ImagePicker that can handle multiple images
         }
     }
+    
+    
 }
-
-// ImagePicker is a custom UIViewControllerRepresentable for selecting images from the photo library
-struct ImagePicker: UIViewControllerRepresentable {
-    @Binding var image: UIImage?
-    
-    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-        var parent: ImagePicker
-        
-        init(
-            parent: ImagePicker
-        ) {
-            self.parent = parent
-        }
-        
-        func imagePickerController(
-            _ picker: UIImagePickerController,
-            didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
-        ) {
-            if let uiImage = info[.originalImage] as? UIImage {
-                parent.image = uiImage
-            }
-            
-            parent.presentationMode.wrappedValue.dismiss()
-        }
-    }
-    
-    @Environment(
-        \.presentationMode
-    ) var presentationMode
-    
-    func makeCoordinator() -> Coordinator {
-        Coordinator(
-            parent: self
-        )
-    }
-    
-    func makeUIViewController(
-        context: Context
-    ) -> UIImagePickerController {
-        let picker = UIImagePickerController()
-        picker.delegate = context.coordinator
-        return picker
-    }
-    
-    func updateUIViewController(
-        _ uiViewController: UIImagePickerController,
-        context: Context
-    ) {
-    }
-        }
-        
-        
-        
- 
-
-    #Preview {
-        PicturesRegistration(
-            path: .constant(
-                NavigationPath()
-            )
-        )
-        .environmentObject(
-            RegisterViewModel()
-        )
-    }

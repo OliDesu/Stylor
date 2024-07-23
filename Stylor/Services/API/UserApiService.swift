@@ -16,7 +16,7 @@ class UserApiService {
             "userPortfolioImages": user.userPortfolioImages
         ]
 
-        db.collection("users").document(user.id!).setData(userData) { error in
+        db.collection("users").document(user.id).setData(userData) { error in
             if let error = error {
                 print("Error adding user: \(error)")
             } else {
@@ -24,6 +24,25 @@ class UserApiService {
             }
         }
     }
+    
+     func updateUserImagesInDatabase() {
+        let user = UserDataService.shared.getCurrentUser()
+         print(user)
+        guard !user.userPortfolioImages.isEmpty else { return }
+        if (user.userPortfolioImages.isEmpty) {
+            return
+        }
+            let db = Firestore.firestore()
+            let userRef = db.collection("users").document(user.id)
+            
+            userRef.updateData(["userPortfolioImages": user.userPortfolioImages]) { error in
+                if let error = error {
+                    print("Error updating user: \(error)")
+                } else {
+                    print("User successfully updated")
+                }
+            }
+        }
     
 }
 

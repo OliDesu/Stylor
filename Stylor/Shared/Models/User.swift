@@ -9,14 +9,20 @@ import Foundation
 
 struct User: Identifiable {
 
-    let id: String?
+    let id: String
     let name: String
     let surname:String
     var age: Date
     var userPortfolioImages: [String]
-    
+    init() {
+        self.id = ""
+        self.name = ""
+        self.surname = ""
+        self.age = Date()
+        self.userPortfolioImages = []
+    }
     init(
-        id: String? = nil,
+        id: String,
         name: String,
         surname: String,
         age: Date,

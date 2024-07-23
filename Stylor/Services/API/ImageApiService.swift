@@ -18,14 +18,10 @@ class ImageApiService: ObservableObject {
         self.user = user
     }
     
-    // Function to upload image to Firebase Storage
     func uploadImage(image: UIImage, completion: @escaping (Result<String, Error>) -> Void) {
-        guard let userId = user.id else {
-            completion(.failure(NSError(domain: "UserIDError", code: -1, userInfo: nil)))
-            return
-        }
+
         
-        let storageRef = Storage.storage().reference().child("userPortfolioImages").child(userId).child(UUID().uuidString)
+        let storageRef = Storage.storage().reference().child("userPortfolioImages").child(user.id).child(UUID().uuidString)
         guard let imageData = image.jpegData(compressionQuality: 0.8) else {
             completion(.failure(NSError(domain: "ImageConversionError", code: -1, userInfo: nil)))
             return
@@ -52,30 +48,41 @@ class ImageApiService: ObservableObject {
         }
     }
     
-    // Function to update user's profileImagesURLs array in Firestore
-    func updateUserProfileImage(image: UIImage) {
-        uploadImage(image: image) { [weak self] result in
-            guard let self = self else { return }
-
-            switch result {
-            case .success(let url):
-                print(url)
-                self.user.userPortfolioImages.append(url)
-                print(user)
-                self.updateUserImageInDatabase()
-            case .failure(let error):
-                print("Failed to upload image: \(error)")
+    
+    
+    func uploadImages(images: [UIImage], completion: @escaping (Result<[String], Error>) -> Void) {
+        let dispatchGroup = DispatchGroup()
+        var urls: [String] = []
+        var errors: [Error] = []
+        
+        for image in images {
+            dispatchGroup.enter()
+            uploadImage(image: image) { result in
+                switch result {
+                case .success(let url):
+                    urls.append(url)
+                case .failure(let error):
+                    errors.append(error)
+                }
+                dispatchGroup.leave()
+            }
+        }
+        
+        dispatchGroup.notify(queue: .main) {
+            if errors.isEmpty {
+                completion(.success(urls))
+            } else {
+                completion(.failure(errors.first!))  // Return the first error for simplicity
             }
         }
     }
     
-    // Function to update user in Firestore
     private func updateUserImageInDatabase() {
-        guard let userId = user.id else { return }
         
         let db = Firestore.firestore()
-        let userRef = db.collection("users").document(userId) // Use .document(userId) to get a DocumentReference
         
+        let userRef = db.collection("users").document(user.id)
+        print(user)
         userRef.updateData(["userPortfolioImages": self.user.userPortfolioImages]) { error in
             if let error = error {
                 print("Error updating user: \(error)")
@@ -84,5 +91,4 @@ class ImageApiService: ObservableObject {
             }
         }
     }
-
 }

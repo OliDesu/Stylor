@@ -4,18 +4,20 @@
 //
 //  Created by Ali El Mufti on 21/07/2024.
 //
-
 import Foundation
+
 class UserDataService {
     static let shared = UserDataService()
     
-    private var currentUser: User?
+    private var currentUser: User
     private let queue = DispatchQueue(label: "com.Stylor.UserDataServiceQueue", attributes: .concurrent)
     
-    private init() { }
+    private init() {
+        self.currentUser = User() // Initialize with a default user
+    }
     
-    func getCurrentUser() -> User? {
-        var user: User?
+    func getCurrentUser() -> User {
+        var user: User!
         queue.sync {
             user = self.currentUser
         }
@@ -30,7 +32,7 @@ class UserDataService {
     
     func clearCurrentUser() {
         queue.async(flags: .barrier) {
-            self.currentUser = nil
+            self.currentUser = User() // Clear to default user
         }
     }
 }
