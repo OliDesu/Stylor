@@ -53,7 +53,14 @@ public class RegisterViewModel: ObservableObject {
                     self.errorMessage = nil
                     print("User registered successfully: \(authResult?.user.email ?? "")")
                     UserDataService.shared.setCurrentUser(user)
-
+                    guard let user = authResult?.user else { return }
+                    user.sendEmailVerification { (error) in
+                        if let error = error {
+                            print("Error sending verification email: \(error.localizedDescription)")
+                            return
+                        }
+                        print("Verification email sent.")
+                    }
                     self.resetForm()
                     self.isRegisteredComplete = true
                     onSuccess()

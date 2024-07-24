@@ -61,6 +61,7 @@
 		D49EA54C2C4D7E3600097B49 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA54B2C4D7E3600097B49 /* UserDataService.swift */; };
 		D49EA54F2C4D97AF00097B49 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA54E2C4D97AF00097B49 /* SpinnerView.swift */; };
 		D49EA5522C5034A100097B49 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA5512C5034A100097B49 /* ImagePicker.swift */; };
+		D49EA5542C50460B00097B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA5532C50460B00097B49 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		D49EA54B2C4D7E3600097B49 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		D49EA54E2C4D97AF00097B49 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		D49EA5512C5034A100097B49 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D49EA5532C50460B00097B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +387,7 @@
 				D48A7B652C39D08F00D3EDF7 /* AuthenticationView.swift */,
 				D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */,
 				D49EA53F2C4AAA5D00097B49 /* LandingView.swift */,
+				D49EA5532C50460B00097B49 /* SceneDelegate.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				D479834B2C4805970077746A /* UserApiService.swift in Sources */,
 				D49EA5422C4BC58800097B49 /* ImageApiService.swift in Sources */,
 				D47983472C472E110077746A /* CardMock.swift in Sources */,
+				D49EA5542C50460B00097B49 /* SceneDelegate.swift in Sources */,
 				D47983352C4702DB0077746A /* CardStackView.swift in Sources */,
 				D47983492C47EBB10077746A /* ImageScrollingOverlay.swift in Sources */,
 				D49EA5522C5034A100097B49 /* ImagePicker.swift in Sources */,
