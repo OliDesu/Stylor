@@ -17,6 +17,7 @@ public class RegisterViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var surname: String = ""
     @Published var age: Date = Date()
+    @Published var role: Occupation = .model
     @Published var isRegisteredComplete: Bool = false
     
     private func resetForm() {
@@ -25,6 +26,7 @@ public class RegisterViewModel: ObservableObject {
         self.errorMessage = nil
         self.name = ""
         self.surname = ""
+        self.role = .tailor
         self.age = Date()
     }
     
@@ -37,6 +39,7 @@ public class RegisterViewModel: ObservableObject {
             name: name,
             surname: surname,
             age: age,
+            role: role,
             userPortfolioImages: []
         )
         userService.addUser(user: user)

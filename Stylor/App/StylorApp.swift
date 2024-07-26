@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 @main
-struct StylorApp: App {
+struct YourApp: App {
     // Register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 

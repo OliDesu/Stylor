@@ -14,24 +14,28 @@ struct MockData {
             name: "Lionel",
             surname: "Messi",
             age: Date(),
+            role: .model,
             userPortfolioImages: ["messi","messi3"]
         ),   .init(
             id: NSUUID().uuidString,
             name: "La fraude",
             surname: "Pele",
             age: Date(),
+            role: .model,
             userPortfolioImages: ["messi","messi2","messi3"]
         ), .init(
             id: NSUUID().uuidString,
             name: "L'eternel second",
             surname: "Cristiano",
             age: Date(),
+            role: .model,
+
             userPortfolioImages: ["messi","messi2","messi3"]
         ), .init(
             id: NSUUID().uuidString,
             name: "Le gros nullos",
             surname: "Mbappard",
-            age: Date(),
+            age: Date(),            role: .model,
             userPortfolioImages: ["messi","messi2","messi3"]
         )
     ]
