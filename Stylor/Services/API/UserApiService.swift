@@ -12,6 +12,7 @@ class UserApiService {
             "id": user.id,
             "name": user.name,
             "surname": user.surname,
+            "role": user.role.rawValue,
             "age": user.age,
             "userPortfolioImages": user.userPortfolioImages
         ]

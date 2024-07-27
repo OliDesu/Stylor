@@ -405,9 +405,9 @@
 			children = (
 				D48A7BB32C40846F00D3EDF7 /* RegisterViewModel.swift */,
 				D49EA5372C49D64200097B49 /* NameAgeRegistration.swift */,
+				D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */,
 				D49EA5392C49D66500097B49 /* MailPasswordRegistration.swift */,
 				D49EA53B2C49D67700097B49 /* PicturesRegistration.swift */,
-				D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */,
 			);
 			path = RegistrationProcess;
 			sourceTree = "<group>";

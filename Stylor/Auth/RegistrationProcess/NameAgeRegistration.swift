@@ -20,7 +20,7 @@ struct NameAgeRegistration: View {
                 .padding()
 
 
-            NavigationLink(destination: MailPasswordRegistration(path: $path).environmentObject(self.viewModel)) {
+            NavigationLink(destination: OccupationChoiceView(path: $path).environmentObject(self.viewModel)) {
                 Text("Next")
                     .padding()
                     .background(Color.blue)

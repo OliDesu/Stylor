@@ -7,6 +7,7 @@
 
 import Foundation
 
-public enum Occupation {
-    case model,photographer,tailor
+public enum Occupation: String {
+    case model = "Model",
+         photographer = "Photographer",tailor = "Tailor"
 }
