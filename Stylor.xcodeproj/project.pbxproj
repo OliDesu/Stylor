@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D41ECCFC2C55386200C5DCDA /* ProfileSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ECCFB2C55386200C5DCDA /* ProfileSearchView.swift */; };
+		D41ECCFE2C56A34900C5DCDA /* UserLookupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ECCFD2C56A34900C5DCDA /* UserLookupViewModel.swift */; };
 		D47983302C4482E80077746A /* SwipeActionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */; };
 		D47983332C46A2CE0077746A /* SizeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983322C46A2CE0077746A /* SizeConstants.swift */; };
 		D47983352C4702DB0077746A /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983342C4702DB0077746A /* CardStackView.swift */; };
@@ -87,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		D41ECCFB2C55386200C5DCDA /* ProfileSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSearchView.swift; sourceTree = "<group>"; };
+		D41ECCFD2C56A34900C5DCDA /* UserLookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLookupViewModel.swift; sourceTree = "<group>"; };
 		D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionIndicatorView.swift; sourceTree = "<group>"; };
 		D47983322C46A2CE0077746A /* SizeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeConstants.swift; sourceTree = "<group>"; };
 		D47983342C4702DB0077746A /* CardStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 				D47983432C4726C70077746A /* CardApiService.swift */,
 				D479834A2C4805970077746A /* UserApiService.swift */,
 				D49EA5412C4BC58800097B49 /* ImageApiService.swift */,
+				D41ECCFD2C56A34900C5DCDA /* UserLookupViewModel.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				D49EA53A2C49D66500097B49 /* MailPasswordRegistration.swift in Sources */,
 				D48A7B9F2C39DE3D00D3EDF7 /* UserInfoView.swift in Sources */,
 				D49EA54C2C4D7E3600097B49 /* UserDataService.swift in Sources */,
+				D41ECCFE2C56A34900C5DCDA /* UserLookupViewModel.swift in Sources */,
 				D49EA5352C4979D300097B49 /* ConvertionUtils.swift in Sources */,
 				D49EA5592C52C63300097B49 /* PortfolioView.swift in Sources */,
 				D47983302C4482E80077746A /* SwipeActionIndicatorView.swift in Sources */,

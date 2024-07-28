@@ -8,7 +8,7 @@ import Foundation
 import SwiftUI
 
 struct ProfileSearchView: View {
-    let userApiService = UserApiService()
+    @StateObject var usersLookup = UsersLookupViewModel()
     @State var keyword = ""
     
     var body: some View {
@@ -18,13 +18,13 @@ struct ProfileSearchView: View {
             },
             set: {
                 keyword = $0
-                userApiService.fetchUsers(with: keyword)
+                usersLookup.fetchUsers(with: keyword)
             }
         )
         VStack {
             SearchBarView(keyword: keywordBinding)
             ScrollView {
-                ForEach(userApiService.queryResultUsers) { user in
+                ForEach(usersLookup.queryResultUsers , id: \.id) { user in
                     ProfileBarView(user: user)
                 }
             }

@@ -7,7 +7,7 @@
 
 import Foundation
 import FirebaseFirestoreSwift
-struct User: Identifiable, Decodable {
+struct User: Identifiable, Codable {
     let id: String
     let firstName: String
     let lastName: String
@@ -17,7 +17,8 @@ struct User: Identifiable, Decodable {
     var username: String 
 
     var keywordsForLookup: [String] {
-        [username.generateStringSequence(), firstName.generateStringSequence(), lastName.generateStringSequence(), "\(firstName) \(lastName)".generateStringSequence()].flatMap { $0 }
+        //Add username when implemented
+        [firstName.generateStringSequence(), lastName.generateStringSequence(), "\(firstName) \(lastName)".generateStringSequence()].flatMap { $0 }
     }
 
     init() {

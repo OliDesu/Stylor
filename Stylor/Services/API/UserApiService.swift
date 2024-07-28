@@ -17,14 +17,17 @@ class UserApiService {
             "age": user.age,
             "userPortfolioImages": user.userPortfolioImages
         ]
+        
+        do {
+                   let document = db.collection("users").document(user.id)
+                   try document.setData(from: user)
+                   document.updateData(["keywordsForLookup": user.keywordsForLookup])
+                   print("Added document")
+               } catch {
+                   print("Error adding: \(error)")
+               }
 
-        db.collection("users").document(user.id).setData(userData) { error in
-            if let error = error {
-                print("Error adding user: \(error)")
-            } else {
-                print("User added successfully")
-            }
-        }
+        
     }
     
      func updateUserImagesInDatabase() {
@@ -56,19 +59,6 @@ class UserApiService {
                 } catch {
                     print("Sync error: \(error)")
                 }
-            }
-        }
-    
-    func fetchUsers(with keyword: String) {
-            db.collection("users").whereField("keywordsForLookup", arrayContains: keyword).getDocuments { querySnapshot, error in
-                guard let documents = querySnapshot?.documents, error == nil else {
-                    print("No documents")
-                    return
-                }
-                self.queryResultUsers = documents.compactMap { queryDocumentSnapshot in
-                    try? queryDocumentSnapshot.data(as: User.self)
-                }
-                print(self.queryResultUsers)
             }
         }
     

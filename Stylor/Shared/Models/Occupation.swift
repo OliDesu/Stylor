@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Occupation: String,Decodable {
+public enum Occupation: String,Codable {
     case model = "Model",
          photographer = "Photographer",
          tailor = "Tailor"
