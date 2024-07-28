@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41ECCFC2C55386200C5DCDA /* ProfileSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ECCFB2C55386200C5DCDA /* ProfileSearchView.swift */; };
 		D47983302C4482E80077746A /* SwipeActionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */; };
 		D47983332C46A2CE0077746A /* SizeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983322C46A2CE0077746A /* SizeConstants.swift */; };
 		D47983352C4702DB0077746A /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983342C4702DB0077746A /* CardStackView.swift */; };
@@ -85,6 +86,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D41ECCFB2C55386200C5DCDA /* ProfileSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSearchView.swift; sourceTree = "<group>"; };
 		D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionIndicatorView.swift; sourceTree = "<group>"; };
 		D47983322C46A2CE0077746A /* SizeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeConstants.swift; sourceTree = "<group>"; };
 		D47983342C4702DB0077746A /* CardStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 		D48A7B932C39D18200D3EDF7 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				D41ECCFB2C55386200C5DCDA /* ProfileSearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				D49EA55B2C53CD1E00097B49 /* Occupation.swift in Sources */,
 				D49EA5422C4BC58800097B49 /* ImageApiService.swift in Sources */,
 				D47983472C472E110077746A /* CardMock.swift in Sources */,
+				D41ECCFC2C55386200C5DCDA /* ProfileSearchView.swift in Sources */,
 				D49EA5542C50460B00097B49 /* SceneDelegate.swift in Sources */,
 				D47983352C4702DB0077746A /* CardStackView.swift in Sources */,
 				D49EA55F2C540FEA00097B49 /* OccupationChoiceView.swift in Sources */,
