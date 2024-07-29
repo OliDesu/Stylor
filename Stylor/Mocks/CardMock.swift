@@ -13,6 +13,7 @@ struct MockData {
             id: NSUUID().uuidString,
             name: "Lionel",
             surname: "Messi",
+            username: "Messi",
             age: Date(),
             role: .model,
             userPortfolioImages: ["messi","messi3"]
@@ -20,6 +21,7 @@ struct MockData {
             id: NSUUID().uuidString,
             name: "La fraude",
             surname: "Pele",
+            username: "Messi",
             age: Date(),
             role: .model,
             userPortfolioImages: ["messi","messi2","messi3"]
@@ -27,6 +29,8 @@ struct MockData {
             id: NSUUID().uuidString,
             name: "L'eternel second",
             surname: "Cristiano",
+            username: "Messi",
+
             age: Date(),
             role: .model,
 
@@ -35,6 +39,8 @@ struct MockData {
             id: NSUUID().uuidString,
             name: "Le gros nullos",
             surname: "Mbappard",
+            username: "Messi",
+
             age: Date(),            role: .model,
             userPortfolioImages: ["messi","messi2","messi3"]
         )

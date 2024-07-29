@@ -48,7 +48,7 @@ struct PicturesRegistration: View {
                     }
                 }
             }) {
-                Text("Upload Images")
+                Text("Finish")
             }
         }
         .sheet(isPresented: $showImagePicker) {

@@ -7,12 +7,17 @@ struct NameAgeRegistration: View {
     var body: some View {
         VStack {
       
+            TextField("Prénom", text: $viewModel.surname)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
             TextField("Nom", text: $viewModel.name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
 
-            TextField("Prénom", text: $viewModel.surname)
+            TextField("Nom d'utilisateur", text: $viewModel.username)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textCase(.lowercase)
                 .padding()
 
             DatePicker("Date de naissance", selection: $viewModel.age, displayedComponents: .date)

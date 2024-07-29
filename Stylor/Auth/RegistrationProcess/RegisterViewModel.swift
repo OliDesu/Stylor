@@ -16,6 +16,7 @@ public class RegisterViewModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var name: String = ""
     @Published var surname: String = ""
+    @Published var username: String = ""
     @Published var age: Date = Date()
     @Published var role: Occupation = .model
     @Published var isRegisteredComplete: Bool = false
@@ -38,6 +39,7 @@ public class RegisterViewModel: ObservableObject {
             id: UUID().uuidString,
             name: name,
             surname: surname,
+            username: username,
             age: age,
             role: role,
             userPortfolioImages: []

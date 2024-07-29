@@ -18,27 +18,28 @@ struct User: Identifiable, Codable {
 
     var keywordsForLookup: [String] {
         //Add username when implemented
-        [firstName.generateStringSequence(), lastName.generateStringSequence(), "\(firstName) \(lastName)".generateStringSequence()].flatMap { $0 }
+        [username.generateStringSequence(),firstName.generateStringSequence(), lastName.generateStringSequence(), "\(firstName) \(lastName)".generateStringSequence()].flatMap { $0 }
     }
 
     init() {
         self.id = ""
         self.firstName = ""
         self.lastName = ""
+        self.username = ""
         self.role = Occupation.model
         self.age = Date()
         self.userPortfolioImages = []
-        self.username = "" // Initialize username
+        self.username = ""
     }
 
     init(
         id: String,
         name: String,
         surname: String,
+        username: String, // Added username to the initializer
         age: Date,
         role: Occupation,
-        userPortfolioImages: [String] = [],
-        username: String = "" // Added username to the initializer
+        userPortfolioImages: [String] = []
     ) {
         self.id = id
         self.firstName = name
