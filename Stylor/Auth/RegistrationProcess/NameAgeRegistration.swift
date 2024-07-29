@@ -17,7 +17,7 @@ struct NameAgeRegistration: View {
 
             TextField("Nom d'utilisateur", text: $viewModel.username)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .textCase(.lowercase)
+                .textInputAutocapitalization(.never)
                 .padding()
 
             DatePicker("Date de naissance", selection: $viewModel.age, displayedComponents: .date)
