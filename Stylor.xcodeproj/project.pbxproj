@@ -16,7 +16,7 @@
 		D479833E2C47212D0077746A /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479833D2C47212D0077746A /* Card.swift */; };
 		D47983412C4721F00077746A /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983402C4721F00077746A /* CardViewModel.swift */; };
 		D47983442C4726C70077746A /* CardApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983432C4726C70077746A /* CardApiService.swift */; };
-		D47983472C472E110077746A /* CardMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983462C472E110077746A /* CardMock.swift */; };
+		D47983472C472E110077746A /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983462C472E110077746A /* UserMock.swift */; };
 		D47983492C47EBB10077746A /* ImageScrollingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983482C47EBB10077746A /* ImageScrollingOverlay.swift */; };
 		D479834B2C4805970077746A /* UserApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479834A2C4805970077746A /* UserApiService.swift */; };
 		D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B632C39D08F00D3EDF7 /* StylorApp.swift */; };
@@ -96,7 +96,7 @@
 		D479833D2C47212D0077746A /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		D47983402C4721F00077746A /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		D47983432C4726C70077746A /* CardApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardApiService.swift; sourceTree = "<group>"; };
-		D47983462C472E110077746A /* CardMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMock.swift; sourceTree = "<group>"; };
+		D47983462C472E110077746A /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
 		D47983482C47EBB10077746A /* ImageScrollingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollingOverlay.swift; sourceTree = "<group>"; };
 		D479834A2C4805970077746A /* UserApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiService.swift; sourceTree = "<group>"; };
 		D48A7B602C39D08F00D3EDF7 /* Stylor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stylor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,7 +219,7 @@
 		D47983452C472E040077746A /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				D47983462C472E110077746A /* CardMock.swift */,
+				D47983462C472E110077746A /* UserMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -631,7 +631,7 @@
 				D479834B2C4805970077746A /* UserApiService.swift in Sources */,
 				D49EA55B2C53CD1E00097B49 /* Occupation.swift in Sources */,
 				D49EA5422C4BC58800097B49 /* ImageApiService.swift in Sources */,
-				D47983472C472E110077746A /* CardMock.swift in Sources */,
+				D47983472C472E110077746A /* UserMock.swift in Sources */,
 				D41ECCFC2C55386200C5DCDA /* ProfileSearchView.swift in Sources */,
 				D49EA5542C50460B00097B49 /* SceneDelegate.swift in Sources */,
 				D47983352C4702DB0077746A /* CardStackView.swift in Sources */,

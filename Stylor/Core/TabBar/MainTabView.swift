@@ -14,6 +14,7 @@ struct MainTabView: View {
             ProfileSearchView().tabItem { Image(systemName: "magnifyingglass").tag(1) }
             Text("Inbox View").tabItem { Image(systemName: "bubble").tag(2) }
             Text("Profile View").tabItem { Image(systemName: "person").tag(3) }
+            PortfolioView().tabItem { Image(systemName: "person").tag(4) }
         }.tint(.primary)   }
 }
 
