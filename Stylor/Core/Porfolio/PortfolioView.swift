@@ -21,13 +21,14 @@ struct PortfolioView: View {
             
             LazyVGrid(columns: [GridItem(.flexible(), spacing: 4), GridItem(.flexible(), spacing: 4)], spacing: 4) {
                 ForEach(currentUser.userPortfolioImages, id: \.self) { img in
-                    WebImage(url: img)
+                    WebImage(url: URL(string: img))
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .aspectRatio(1, contentMode: .fit)
                         .clipped()
+                        .padding()
                         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
                         .accessibilityLabel("User uploaded image")
                 }
