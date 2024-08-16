@@ -20,11 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Configure App Check with Debug Provider Factory
         let providerFactory = AppCheckDebugProviderFactory()
         AppCheck.setAppCheckProviderFactory(providerFactory)
-        
-        // Set up the initial window and root view controller
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = LoginViewController() // Your initial view controller
-        window?.makeKeyAndVisible()
 
         return true
     }

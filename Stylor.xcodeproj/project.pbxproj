@@ -10,6 +10,8 @@
 		D412A4942C5D684A0060C495 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D412A4932C5D684A0060C495 /* SDWebImageSwiftUI */; };
 		D41ECCFC2C55386200C5DCDA /* ProfileSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ECCFB2C55386200C5DCDA /* ProfileSearchView.swift */; };
 		D41ECCFE2C56A34900C5DCDA /* UserLookupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ECCFD2C56A34900C5DCDA /* UserLookupViewModel.swift */; };
+		D421AE142C6F64E400FABB69 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421AE132C6F64E400FABB69 /* LoginView.swift */; };
+		D421AE162C6F659A00FABB69 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421AE152C6F659A00FABB69 /* LoginViewModel.swift */; };
 		D47983302C4482E80077746A /* SwipeActionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */; };
 		D47983332C46A2CE0077746A /* SizeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983322C46A2CE0077746A /* SizeConstants.swift */; };
 		D47983352C4702DB0077746A /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47983342C4702DB0077746A /* CardStackView.swift */; };
@@ -90,6 +92,8 @@
 /* Begin PBXFileReference section */
 		D41ECCFB2C55386200C5DCDA /* ProfileSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSearchView.swift; sourceTree = "<group>"; };
 		D41ECCFD2C56A34900C5DCDA /* UserLookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLookupViewModel.swift; sourceTree = "<group>"; };
+		D421AE132C6F64E400FABB69 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D421AE152C6F659A00FABB69 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionIndicatorView.swift; sourceTree = "<group>"; };
 		D47983322C46A2CE0077746A /* SizeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeConstants.swift; sourceTree = "<group>"; };
 		D47983342C4702DB0077746A /* CardStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -403,6 +407,8 @@
 				D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */,
 				D49EA53F2C4AAA5D00097B49 /* LandingView.swift */,
 				D49EA5532C50460B00097B49 /* SceneDelegate.swift */,
+				D421AE132C6F64E400FABB69 /* LoginView.swift */,
+				D421AE152C6F659A00FABB69 /* LoginViewModel.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -634,6 +640,7 @@
 				D48A7B9C2C39DACF00D3EDF7 /* CardView.swift in Sources */,
 				D479834B2C4805970077746A /* UserApiService.swift in Sources */,
 				D49EA55B2C53CD1E00097B49 /* Occupation.swift in Sources */,
+				D421AE162C6F659A00FABB69 /* LoginViewModel.swift in Sources */,
 				D49EA5422C4BC58800097B49 /* ImageApiService.swift in Sources */,
 				D47983472C472E110077746A /* UserMock.swift in Sources */,
 				D41ECCFC2C55386200C5DCDA /* ProfileSearchView.swift in Sources */,
@@ -654,6 +661,7 @@
 				D49EA5592C52C63300097B49 /* PortfolioView.swift in Sources */,
 				D47983302C4482E80077746A /* SwipeActionIndicatorView.swift in Sources */,
 				D47983332C46A2CE0077746A /* SizeConstants.swift in Sources */,
+				D421AE142C6F64E400FABB69 /* LoginView.swift in Sources */,
 				D49EA5402C4AAA5D00097B49 /* LandingView.swift in Sources */,
 				D479833C2C4720D10077746A /* User.swift in Sources */,
 			);

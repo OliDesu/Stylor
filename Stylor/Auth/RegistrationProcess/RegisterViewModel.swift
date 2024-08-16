@@ -5,9 +5,6 @@
 //  Created by Ali El Mufti on 11/07/2024.
 //
 
-
-
-import SwiftUI
 import FirebaseAuth
 
 public class RegisterViewModel: ObservableObject {
@@ -30,8 +27,6 @@ public class RegisterViewModel: ObservableObject {
         self.role = .tailor
         self.age = Date()
     }
-    
-
     
     func register(onSuccess: @escaping () -> Void) {
         let userService = UserApiService()

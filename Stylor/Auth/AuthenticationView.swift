@@ -29,31 +29,29 @@ struct AuthenticationView: View {
                         }.navigationDestination(for: String.self) { value in
                             switch value {
                             case "LoginView":
-                                LoginViewControllerWrapper(isLoggedIn:$isLoggedIn)
+                                LoginView(viewModel: LoginViewModel(), didLogin: $isLoggedIn)
                                 
                             case "RegistrationView":
                                 NameAgeRegistration(
+                                    delegate: viewModel,
                                     path: $path
-                                ).environmentObject(self.viewModel)
+                                )
                             default:
                                 Text("Unknown View")
                             }
-            
-                        
-                        
                         }
                     }
                     
                 }
             }
         }
-                .padding()
-                .frame(maxHeight: .infinity)
-            }
-        
+        .padding()
+        .frame(maxHeight: .infinity)
+    }
+    
 }
 
 #Preview {
-        AuthenticationView(viewModel: RegisterViewModel())
+        AuthenticationView()
 }
 
