@@ -3,10 +3,9 @@ import PhotosUI
 import SwiftUI
 
 struct PicturesRegistration: View {
-    @EnvironmentObject var viewModel: RegisterViewModel
     @State private var showImagePicker = false
     @State private var selectedImages: [UIImage] = []
-    @Binding var path: NavigationPath
+    @Binding var path: AuthenticationNavigationPath
     let userService = UserApiService()
 
     var body: some View {
@@ -39,9 +38,7 @@ struct PicturesRegistration: View {
                             currentUser.userPortfolioImages.append(contentsOf: urls)
                             UserDataService.shared.setCurrentUser(currentUser)
                             userService.updateUserImagesInDatabase()
-                            path.removeLast(
-                                path.count
-                            )
+                            path.popToFirst()
                         case .failure(let error):
                             print("Failed to upload images: \(error)")
                         }

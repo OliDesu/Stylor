@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct OccupationChoiceView: View {
+    @Binding var path: AuthenticationNavigationPath
     
-    @EnvironmentObject var viewModel: RegisterViewModel
-    @Binding var path: NavigationPath
+    @Binding var role: Occupation
+    
     var body: some View {
         Picker(
             "Role",
-            selection: $viewModel.role
+            selection: $role
         ) {
             Text(
                 "Model 🦹🏻"
@@ -33,16 +34,29 @@ struct OccupationChoiceView: View {
             )
         }
         
-        NavigationLink(destination: MailPasswordRegistration(path: $path).environmentObject(self.viewModel)) {
-            Text("Next")
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(8)
+        Button("Next") {
+            path.navigate(to: .registerMailPassword)
         }
+        .padding()
+        .background(Color.blue)
+        .foregroundColor(.white)
+        .cornerRadius(8)
+        
+//        NavigationLink(destination: MailPasswordRegistration(path: $path).environmentObject(self.viewModel)) {
+//            Text("Next")
+//                .padding()
+//                .background(Color.blue)
+//                .foregroundColor(.white)
+//                .cornerRadius(8)
+//        }
     }
 }
 
 #Preview {
-    OccupationChoiceView(path: .constant(NavigationPath()))
+    OccupationChoiceView(
+        path: .constant(
+            AuthenticationNavigationPath()
+        ),
+        role: .constant(.model)
+    )
 }

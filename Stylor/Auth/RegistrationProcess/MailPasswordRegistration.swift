@@ -11,19 +11,24 @@ import SwiftUI
 import SwiftUI
 
 struct MailPasswordRegistration: View {
-    @EnvironmentObject var viewModel: RegisterViewModel
-    @Binding var path: NavigationPath
+    weak var delegate: RegisterDelegate?
+    
+    @Binding var path: AuthenticationNavigationPath
+    @Binding var email: String
+    @Binding var password: String
+    @Binding var isRegisteredComplete: Bool
+    @Binding var errorMessage: String?
     @State private var isLoading: Bool = false
     @State private var navigateToPicturesRegistration: Bool = false
     
     var body: some View {
         VStack {
-            TextField("Email", text: $viewModel.email)
+            TextField("Email", text: $email)
                 .autocapitalization(.none)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
-            SecureField("Password", text: $viewModel.password)
+            SecureField("Password", text: $password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
@@ -32,15 +37,15 @@ struct MailPasswordRegistration: View {
             if isLoading {
                 SpinnerView()
             } else {
-                Button(action: {
+                Button() {
                     isLoading = true
-                    viewModel.register {
-                        self.isLoading = false
-                        if viewModel.isRegisteredComplete {
-                            self.navigateToPicturesRegistration = true
-                        }
-                    }
-                }) {
+                    delegate?.register() //{
+//                        self.isLoading = false
+//                        if isRegisteredComplete {
+//                            self.navigateToPicturesRegistration = true
+//                        }
+//                    }
+                } label: {
                     Text("Next")
                         .padding()
                         .background(Color.black)
@@ -49,23 +54,32 @@ struct MailPasswordRegistration: View {
                 }
             }
             
-            if let errorMessage = viewModel.errorMessage {
+            if let errorMessage = errorMessage {
                 Text(errorMessage)
                     .foregroundColor(.red)
                     .padding()
             }
         }
         .padding()
-        .background(
-            NavigationLink(
-                destination: PicturesRegistration(path: $path)
-                    .environmentObject(viewModel),
-                isActive: $navigateToPicturesRegistration
-            ) {
-                EmptyView()
+        .onChange(of: isRegisteredComplete, { _, newValue in
+            if newValue {
+                path.navigate(to: .registerPicture)
             }
-        )
+        })
+//        .background(
+//            NavigationLink(
+//                destination: PicturesRegistration(path: $path)
+//                    .environmentObject(viewModel),
+//                isActive: $navigateToPicturesRegistration
+//            ) {
+//                EmptyView()
+//            }
+//        )
     }
+}
+
+protocol RegisterDelegate: AnyObject {
+    func register()
 }
 
 #Preview {

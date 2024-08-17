@@ -5,7 +5,8 @@ struct AuthenticationView: View {
     @State private var showRegister = false
     @State private var isLoggedIn = false
     @StateObject var viewModel: RegisterViewModel = RegisterViewModel()
-    @State private var path = NavigationPath()
+    
+    @State private var path = AuthenticationNavigationPath()
     
     var body: some View {
         VStack {
@@ -20,38 +21,83 @@ struct AuthenticationView: View {
                     Text("🎨🪡🦹🏻").font(.system(size: 70))
                     Divider()
                     Spacer()
-                    
-                    NavigationStack(path: $path){
+                    NavigationStack(path: $path.path){
                         List {
-                            
                             NavigationLink("Se Connecter", value: "LoginView")
                             NavigationLink("S'inscrire", value: "RegistrationView")
-                        }.navigationDestination(for: String.self) { value in
+                        }.navigationDestination(for: AuthenticationPathValue.self) { value in
                             switch value {
-                            case "LoginView":
+                            case .loggedIn:
                                 LoginView(viewModel: LoginViewModel(), didLogin: $isLoggedIn)
-                                
-                            case "RegistrationView":
+                            case .registerName:
                                 NameAgeRegistration(
-                                    delegate: viewModel,
+                                    path: $path,
+                                    surname: $viewModel.surname,
+                                    name: $viewModel.name,
+                                    username: $viewModel.username,
+                                    age: $viewModel.age,
+                                    errorMessage: $viewModel.errorMessage
+                                ).environmentObject(self.viewModel)
+                            case .registerOccupation:
+                                OccupationChoiceView(
+                                    path: $path,
+                                    role: $viewModel.role
+                                )
+                            case .registerMailPassword:
+                                MailPasswordRegistration(
+                                    path: $path,
+                                    email: $viewModel.email,
+                                    password: $viewModel.password,
+                                    isRegisteredComplete: $viewModel.isRegisteredComplete,
+                                    errorMessage: $viewModel.errorMessage
+                                )
+                            case .registerPicture:
+                                PicturesRegistration(
                                     path: $path
                                 )
-                            default:
-                                Text("Unknown View")
                             }
+//                            switch value {
+//                            case "LoginView":
+//                                LoginView(viewModel: LoginViewModel(), didLogin: $isLoggedIn)
+//                            case "RegistrationView":
+//                                NameAgeRegistration(
+//                                    path: $path
+//                                ).environmentObject(self.viewModel)
+//                            default:
+//                                Text("Unknown View")
+//                            }
                         }
                     }
-                    
                 }
             }
         }
         .padding()
         .frame(maxHeight: .infinity)
     }
+}
+
+enum AuthenticationPathValue: Hashable {
+    case loggedIn, registerName, registerOccupation, registerMailPassword, registerPicture
+}
+
+@Observable
+class AuthenticationNavigationPath {
+    var path = NavigationPath()
     
+    func navigate(to value: AuthenticationPathValue) {
+        path.append(value)
+    }
+    
+    func back() {
+        path.removeLast()
+    }
+    
+    func popToFirst() {
+        path = .init()
+    }
 }
 
 #Preview {
-        AuthenticationView()
+    AuthenticationView()
 }
 
