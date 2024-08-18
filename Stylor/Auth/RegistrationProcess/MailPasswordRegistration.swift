@@ -82,7 +82,14 @@ protocol RegisterDelegate: AnyObject {
     func register()
 }
 
+
 #Preview {
-    MailPasswordRegistration(path: .constant(NavigationPath()))
-        .environmentObject(RegisterViewModel())
+    MailPasswordRegistration(
+        path: .constant(AuthenticationNavigationPath()),          // Provide a default value for the path
+        email: .constant(""),                   // Provide a default value for the email
+        password: .constant(""),                // Provide a default value for the password
+        isRegisteredComplete: .constant(false), // Provide a default value for registration status
+        errorMessage: .constant(nil)            // Provide a default value for the error message
+    )
+    .environmentObject(RegisterViewModel())     // This will be used if your view relies on a ViewModel
 }
