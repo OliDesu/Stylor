@@ -7,6 +7,11 @@
 
 import Foundation
 
+/*
+ Use of custom PathStore in order to navigate throughout the authentication / register process.
+ It is better than using NavigationPath since we don't really know which values are stored, here
+ we constrain ourselves to only use PathValue enum values.
+ */
 @Observable
 class AuthenticationNavigationPathStore {
     var path: [PathValue]
