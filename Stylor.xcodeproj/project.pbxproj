@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97E395802C737DEC005C713E /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E3957F2C737DEC005C713E /* AppView.swift */; };
+		97E3958E2C7383CD005C713E /* AuthenticationNavigationPathStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E3958D2C7383CD005C713E /* AuthenticationNavigationPathStore.swift */; };
+		97E395912C7384F0005C713E /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E395902C7384F0005C713E /* AuthState.swift */; };
+		97E395932C73889F005C713E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97E395922C73889F005C713E /* GoogleService-Info.plist */; };
 		D412A4942C5D684A0060C495 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D412A4932C5D684A0060C495 /* SDWebImageSwiftUI */; };
 		D41ECCFC2C55386200C5DCDA /* ProfileSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ECCFB2C55386200C5DCDA /* ProfileSearchView.swift */; };
 		D41ECCFE2C56A34900C5DCDA /* UserLookupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ECCFD2C56A34900C5DCDA /* UserLookupViewModel.swift */; };
@@ -32,11 +36,9 @@
 		D48A7B9A2C39D22C00D3EDF7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B992C39D22C00D3EDF7 /* MainTabView.swift */; };
 		D48A7B9C2C39DACF00D3EDF7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B9B2C39DACF00D3EDF7 /* CardView.swift */; };
 		D48A7B9F2C39DE3D00D3EDF7 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7B9E2C39DE3D00D3EDF7 /* UserInfoView.swift */; };
-		D48A7BA32C3DACBD00D3EDF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D48A7BA22C3DACBD00D3EDF7 /* GoogleService-Info.plist */; };
 		D48A7BA92C3DAFD600D3EDF7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D48A7BA82C3DAFD600D3EDF7 /* FirebaseAnalytics */; };
 		D48A7BAB2C3DAFD600D3EDF7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D48A7BAA2C3DAFD600D3EDF7 /* FirebaseAuth */; };
 		D48A7BAD2C3DAFD600D3EDF7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D48A7BAC2C3DAFD600D3EDF7 /* FirebaseDatabase */; };
-		D48A7BB22C3EFBAB00D3EDF7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */; };
 		D48A7BB42C40846F00D3EDF7 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48A7BB32C40846F00D3EDF7 /* RegisterViewModel.swift */; };
 		D49EA5152C496AF100097B49 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D49EA5142C496AF100097B49 /* FirebaseAnalytics */; };
 		D49EA5172C496AF100097B49 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D49EA5162C496AF100097B49 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -66,7 +68,6 @@
 		D49EA54C2C4D7E3600097B49 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA54B2C4D7E3600097B49 /* UserDataService.swift */; };
 		D49EA54F2C4D97AF00097B49 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA54E2C4D97AF00097B49 /* SpinnerView.swift */; };
 		D49EA5522C5034A100097B49 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA5512C5034A100097B49 /* ImagePicker.swift */; };
-		D49EA5542C50460B00097B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA5532C50460B00097B49 /* SceneDelegate.swift */; };
 		D49EA5592C52C63300097B49 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA5582C52C63300097B49 /* PortfolioView.swift */; };
 		D49EA55B2C53CD1E00097B49 /* Occupation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA55A2C53CD1E00097B49 /* Occupation.swift */; };
 		D49EA55F2C540FEA00097B49 /* OccupationChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */; };
@@ -90,6 +91,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		97E3957F2C737DEC005C713E /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		97E3958D2C7383CD005C713E /* AuthenticationNavigationPathStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationNavigationPathStore.swift; sourceTree = "<group>"; };
+		97E395902C7384F0005C713E /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		97E395922C73889F005C713E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D41ECCFB2C55386200C5DCDA /* ProfileSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSearchView.swift; sourceTree = "<group>"; };
 		D41ECCFD2C56A34900C5DCDA /* UserLookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLookupViewModel.swift; sourceTree = "<group>"; };
 		D421AE132C6F64E400FABB69 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -117,10 +122,7 @@
 		D48A7B992C39D22C00D3EDF7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		D48A7B9B2C39DACF00D3EDF7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D48A7B9E2C39DE3D00D3EDF7 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
-		D48A7BA22C3DACBD00D3EDF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D48A7BA42C3DAD0C00D3EDF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D48A7BA62C3DAFB400D3EDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D48A7BB32C40846F00D3EDF7 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D49EA5342C4979D300097B49 /* ConvertionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertionUtils.swift; sourceTree = "<group>"; };
 		D49EA5372C49D64200097B49 /* NameAgeRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAgeRegistration.swift; sourceTree = "<group>"; };
@@ -131,7 +133,6 @@
 		D49EA54B2C4D7E3600097B49 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		D49EA54E2C4D97AF00097B49 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		D49EA5512C5034A100097B49 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		D49EA5532C50460B00097B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D49EA5582C52C63300097B49 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		D49EA55A2C53CD1E00097B49 /* Occupation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occupation.swift; sourceTree = "<group>"; };
 		D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccupationChoiceView.swift; sourceTree = "<group>"; };
@@ -185,11 +186,108 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D421AE172C7103DA00FABB69 /* Presentation */ = {
+		97E3957E2C737D30005C713E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D48A7B942C39D18800D3EDF7 /* Profile */,
+				D48A7B962C39D1B600D3EDF7 /* Messaging */,
+				D48A7B922C39D16E00D3EDF7 /* TabBar */,
+				D48A7B932C39D18200D3EDF7 /* Search */,
+				D48A7B952C39D19500D3EDF7 /* Cards */,
+				D49EA5572C52C60900097B49 /* Porfolio */,
+				97E3958B2C7382CF005C713E /* LandingPage */,
+				97E395842C7381B4005C713E /* Authentication */,
+				97E395832C738097005C713E /* Shared */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		97E395832C738097005C713E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D49EA54D2C4D978D00097B49 /* Animations */,
+				D49EA5502C50348F00097B49 /* ImagePickers */,
+				97E3957F2C737DEC005C713E /* AppView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		97E395842C7381B4005C713E /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				97E395882C73827B005C713E /* LoginProcess */,
+				D49EA5362C49D5B900097B49 /* RegistrationProcess */,
+				D48A7B652C39D08F00D3EDF7 /* AuthenticationView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		97E395862C738202005C713E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D48A7BB32C40846F00D3EDF7 /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		97E395872C73820C005C713E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D49EA5372C49D64200097B49 /* NameAgeRegistration.swift */,
+				D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */,
+				D49EA5392C49D66500097B49 /* MailPasswordRegistration.swift */,
+				D49EA53B2C49D67700097B49 /* PicturesRegistration.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97E395882C73827B005C713E /* LoginProcess */ = {
+			isa = PBXGroup;
+			children = (
+				97E395892C738287005C713E /* View */,
+				97E3958A2C73828D005C713E /* ViewModel */,
+			);
+			path = LoginProcess;
+			sourceTree = "<group>";
+		};
+		97E395892C738287005C713E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D421AE132C6F64E400FABB69 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97E3958A2C73828D005C713E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D421AE152C6F659A00FABB69 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		97E3958B2C7382CF005C713E /* LandingPage */ = {
+			isa = PBXGroup;
+			children = (
+				D49EA53F2C4AAA5D00097B49 /* LandingView.swift */,
+			);
+			path = LandingPage;
+			sourceTree = "<group>";
+		};
+		97E3958C2C7383AE005C713E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				97E3958D2C7383CD005C713E /* AuthenticationNavigationPathStore.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		97E3958F2C7384DD005C713E /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				97E395902C7384F0005C713E /* AuthState.swift */,
+			);
+			path = AppState;
 			sourceTree = "<group>";
 		};
 		D47983312C46A28B0077746A /* Constants */ = {
@@ -222,7 +320,6 @@
 		D47983422C4722610077746A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D49EA5502C50348F00097B49 /* ImagePickers */,
 				D49EA54A2C4D7CE800097B49 /* Data */,
 				D49EA5492C4D7CDA00097B49 /* API */,
 			);
@@ -240,7 +337,6 @@
 		D48A7B572C39D08F00D3EDF7 = {
 			isa = PBXGroup;
 			children = (
-				D48A7BA22C3DACBD00D3EDF7 /* GoogleService-Info.plist */,
 				D48A7B622C39D08F00D3EDF7 /* Stylor */,
 				D48A7B732C39D09000D3EDF7 /* StylorTests */,
 				D48A7B7D2C39D09000D3EDF7 /* StylorUITests */,
@@ -262,16 +358,15 @@
 		D48A7B622C39D08F00D3EDF7 /* Stylor */ = {
 			isa = PBXGroup;
 			children = (
-				D421AE172C7103DA00FABB69 /* Presentation */,
+				97E395922C73889F005C713E /* GoogleService-Info.plist */,
+				D48A7B8D2C39D0FE00D3EDF7 /* App */,
+				D48A7B8E2C39D11400D3EDF7 /* Core */,
+				97E3957E2C737D30005C713E /* Presentation */,
 				D47983452C472E040077746A /* Mocks */,
 				D47983422C4722610077746A /* Services */,
-				D48A7BB02C3EFB9500D3EDF7 /* Auth */,
 				D48A7BA62C3DAFB400D3EDF7 /* Info.plist */,
 				D48A7B912C39D12F00D3EDF7 /* Utils */,
 				D48A7B902C39D12700D3EDF7 /* Shared */,
-				D48A7B8F2C39D11F00D3EDF7 /* Extensions */,
-				D48A7B8E2C39D11400D3EDF7 /* Core */,
-				D48A7B8D2C39D0FE00D3EDF7 /* App */,
 				D48A7B672C39D09000D3EDF7 /* Assets.xcassets */,
 				D48A7B692C39D09000D3EDF7 /* Preview Content */,
 			);
@@ -314,29 +409,16 @@
 		D48A7B8E2C39D11400D3EDF7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D49EA5572C52C60900097B49 /* Porfolio */,
-				D48A7B962C39D1B600D3EDF7 /* Messaging */,
-				D48A7B952C39D19500D3EDF7 /* Cards */,
-				D48A7B942C39D18800D3EDF7 /* Profile */,
-				D48A7B932C39D18200D3EDF7 /* Search */,
-				D48A7B922C39D16E00D3EDF7 /* TabBar */,
+				97E3958F2C7384DD005C713E /* AppState */,
+				97E3958C2C7383AE005C713E /* Navigation */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		D48A7B8F2C39D11F00D3EDF7 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D48A7B902C39D12700D3EDF7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D49EA54D2C4D978D00097B49 /* Animations */,
 				D479833A2C4720C30077746A /* Models */,
-				D48A7BA42C3DAD0C00D3EDF7 /* GoogleService-Info.plist */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -369,7 +451,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Profile;
+			name = Profile;
+			path = ../Core/Profile;
 			sourceTree = "<group>";
 		};
 		D48A7B952C39D19500D3EDF7 /* Cards */ = {
@@ -385,7 +468,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Messaging;
+			name = Messaging;
+			path = ../Core/Messaging;
 			sourceTree = "<group>";
 		};
 		D48A7B9D2C39DE1D00D3EDF7 /* Views */ = {
@@ -407,28 +491,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D48A7BB02C3EFB9500D3EDF7 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				D49EA5362C49D5B900097B49 /* RegistrationProcess */,
-				D48A7B652C39D08F00D3EDF7 /* AuthenticationView.swift */,
-				D48A7BB12C3EFBAB00D3EDF7 /* LoginViewController.swift */,
-				D49EA53F2C4AAA5D00097B49 /* LandingView.swift */,
-				D49EA5532C50460B00097B49 /* SceneDelegate.swift */,
-				D421AE132C6F64E400FABB69 /* LoginView.swift */,
-				D421AE152C6F659A00FABB69 /* LoginViewModel.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
 		D49EA5362C49D5B900097B49 /* RegistrationProcess */ = {
 			isa = PBXGroup;
 			children = (
-				D48A7BB32C40846F00D3EDF7 /* RegisterViewModel.swift */,
-				D49EA5372C49D64200097B49 /* NameAgeRegistration.swift */,
-				D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */,
-				D49EA5392C49D66500097B49 /* MailPasswordRegistration.swift */,
-				D49EA53B2C49D67700097B49 /* PicturesRegistration.swift */,
+				97E395872C73820C005C713E /* View */,
+				97E395862C738202005C713E /* ViewModel */,
 			);
 			path = RegistrationProcess;
 			sourceTree = "<group>";
@@ -613,7 +680,7 @@
 			files = (
 				D48A7B6B2C39D09000D3EDF7 /* Preview Assets.xcassets in Resources */,
 				D48A7B682C39D09000D3EDF7 /* Assets.xcassets in Resources */,
-				D48A7BA32C3DACBD00D3EDF7 /* GoogleService-Info.plist in Resources */,
+				97E395932C73889F005C713E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,9 +705,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48A7BB22C3EFBAB00D3EDF7 /* LoginViewController.swift in Sources */,
 				D49EA54F2C4D97AF00097B49 /* SpinnerView.swift in Sources */,
+				97E395912C7384F0005C713E /* AuthState.swift in Sources */,
 				D47983442C4726C70077746A /* CardApiService.swift in Sources */,
+				97E395802C737DEC005C713E /* AppView.swift in Sources */,
 				D48A7B662C39D08F00D3EDF7 /* AuthenticationView.swift in Sources */,
 				D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */,
 				D48A7BB42C40846F00D3EDF7 /* RegisterViewModel.swift in Sources */,
@@ -652,8 +720,8 @@
 				D49EA5422C4BC58800097B49 /* ImageApiService.swift in Sources */,
 				D47983472C472E110077746A /* UserMock.swift in Sources */,
 				D41ECCFC2C55386200C5DCDA /* ProfileSearchView.swift in Sources */,
-				D49EA5542C50460B00097B49 /* SceneDelegate.swift in Sources */,
 				D47983352C4702DB0077746A /* CardStackView.swift in Sources */,
+				97E3958E2C7383CD005C713E /* AuthenticationNavigationPathStore.swift in Sources */,
 				D49EA55F2C540FEA00097B49 /* OccupationChoiceView.swift in Sources */,
 				D47983492C47EBB10077746A /* ImageScrollingOverlay.swift in Sources */,
 				D49EA5522C5034A100097B49 /* ImagePicker.swift in Sources */,
@@ -844,6 +912,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -874,6 +943,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

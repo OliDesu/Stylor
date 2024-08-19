@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct OccupationChoiceView: View {
-    @Binding var path: AuthenticationNavigationPath
-    
+    @Environment(AuthenticationNavigationPathStore.self) var authPathStore
+
     @Binding var role: Occupation
     
     var body: some View {
@@ -35,28 +35,17 @@ struct OccupationChoiceView: View {
         }
         
         Button("Next") {
-            path.navigate(to: .registerMailPassword)
+            authPathStore.navigate(to: .registerMailPassword)
         }
         .padding()
         .background(Color.blue)
         .foregroundColor(.white)
         .cornerRadius(8)
-        
-//        NavigationLink(destination: MailPasswordRegistration(path: $path).environmentObject(self.viewModel)) {
-//            Text("Next")
-//                .padding()
-//                .background(Color.blue)
-//                .foregroundColor(.white)
-//                .cornerRadius(8)
-//        }
     }
 }
 
 #Preview {
     OccupationChoiceView(
-        path: .constant(
-            AuthenticationNavigationPath()
-        ),
         role: .constant(.model)
     )
 }

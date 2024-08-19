@@ -11,9 +11,10 @@ import SwiftUI
 import SwiftUI
 
 struct MailPasswordRegistration: View {
+    @Environment(AuthenticationNavigationPathStore.self) var authPathStore
+
     weak var delegate: RegisterDelegate?
-    
-    @Binding var path: AuthenticationNavigationPath
+
     @Binding var email: String
     @Binding var password: String
     @Binding var isRegisteredComplete: Bool
@@ -39,12 +40,7 @@ struct MailPasswordRegistration: View {
             } else {
                 Button() {
                     isLoading = true
-                    delegate?.register() //{
-//                        self.isLoading = false
-//                        if isRegisteredComplete {
-//                            self.navigateToPicturesRegistration = true
-//                        }
-//                    }
+                    delegate?.register()
                 } label: {
                     Text("Next")
                         .padding()
@@ -63,18 +59,10 @@ struct MailPasswordRegistration: View {
         .padding()
         .onChange(of: isRegisteredComplete, { _, newValue in
             if newValue {
-                path.navigate(to: .registerPicture)
+                isLoading = false
+                authPathStore.navigate(to: .registerPicture)
             }
         })
-//        .background(
-//            NavigationLink(
-//                destination: PicturesRegistration(path: $path)
-//                    .environmentObject(viewModel),
-//                isActive: $navigateToPicturesRegistration
-//            ) {
-//                EmptyView()
-//            }
-//        )
     }
 }
 
@@ -85,11 +73,9 @@ protocol RegisterDelegate: AnyObject {
 
 #Preview {
     MailPasswordRegistration(
-        path: .constant(AuthenticationNavigationPath()),          // Provide a default value for the path
         email: .constant(""),                   // Provide a default value for the email
         password: .constant(""),                // Provide a default value for the password
         isRegisteredComplete: .constant(false), // Provide a default value for registration status
         errorMessage: .constant(nil)            // Provide a default value for the error message
     )
-    .environmentObject(RegisterViewModel())     // This will be used if your view relies on a ViewModel
 }

@@ -40,10 +40,7 @@ struct YourApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                AuthenticationView() // Your initial view
-            }
-            .environment(\.colorScheme, .dark) // Adjust to your preferred color scheme
+            AppView() // Your initial view
         }
     }
 }
