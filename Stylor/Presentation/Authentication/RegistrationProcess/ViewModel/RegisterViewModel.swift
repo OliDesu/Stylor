@@ -27,47 +27,6 @@ public class RegisterViewModel: ObservableObject {
         self.role = .tailor
         self.age = Date()
     }
-    
-//    func register(onSuccess: @escaping () -> Void) {
-//        let userService = UserApiService()
-//        let user = User(
-//            id: UUID().uuidString,
-//            name: name,
-//            surname: surname,
-//            username: username,
-//            age: age,
-//            role: role,
-//            userPortfolioImages: []
-//        )
-//        userService.addUser(user: user)
-//        
-//        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-//            if let error = error {
-//                DispatchQueue.main.async {
-//                    self.errorMessage = error.localizedDescription
-//                    self.isRegisteredComplete = false
-//                }
-//            } else {
-//                DispatchQueue.main.async {
-//                    // Handle successful registration
-//                    self.errorMessage = nil
-//                    print("User registered successfully: \(authResult?.user.email ?? "")")
-//                    UserDataService.shared.setCurrentUser(user)
-//                    guard let user = authResult?.user else { return }
-//                    user.sendEmailVerification { (error) in
-//                        if let error = error {
-//                            print("Error sending verification email: \(error.localizedDescription)")
-//                            return
-//                        }
-//                        print("Verification email sent.")
-//                    }
-//                    self.resetForm()
-//                    self.isRegisteredComplete = true
-//                    onSuccess()
-//                }
-//            }
-//        }
-//    }
 }
 
 extension RegisterViewModel: RegisterDelegate {
@@ -84,6 +43,8 @@ extension RegisterViewModel: RegisterDelegate {
         )
         userService.addUser(user: user)
         
+        // We specify [weak self], otherwise self (RegisterViewModel) will be captured by Auth since
+        // it is used in the completion handler => Memory leak
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
             if let error = error {
                 DispatchQueue.main.async {
