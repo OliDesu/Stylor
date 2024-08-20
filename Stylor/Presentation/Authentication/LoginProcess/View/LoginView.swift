@@ -11,9 +11,7 @@ struct LoginView: View {
     @State private(set) var viewModel: LoginViewModel
     @State private var email = ""
     @State private var password = ""
-    
-    @Binding var didLogin: Bool
-    
+
     var body: some View {
         VStack {
             TextField("Email", text: $email)
@@ -25,12 +23,9 @@ struct LoginView: View {
             }
             .clipShape(.capsule)
         }
-        .onReceive(viewModel.didLogin) { _ in
-            didLogin = true
-        }
     }
 }
 
 #Preview {
-    LoginView(viewModel: LoginViewModel(), didLogin: .constant(false))
+    LoginView(viewModel: LoginViewModel())
 }

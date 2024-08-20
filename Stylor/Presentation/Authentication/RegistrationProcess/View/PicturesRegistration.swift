@@ -3,9 +3,10 @@ import PhotosUI
 import SwiftUI
 
 struct PicturesRegistration: View {
+    @Environment(AuthenticationNavigationPathStore.self) var authPathStore
+
     @State private var showImagePicker = false
     @State private var selectedImages: [UIImage] = []
-    @Binding var path: AuthenticationNavigationPath
     let userService = UserApiService()
 
     var body: some View {
@@ -38,7 +39,7 @@ struct PicturesRegistration: View {
                             currentUser.userPortfolioImages.append(contentsOf: urls)
                             UserDataService.shared.setCurrentUser(currentUser)
                             userService.updateUserImagesInDatabase()
-                            path.popToFirst()
+                            authPathStore.popToFirst()
                         case .failure(let error):
                             print("Failed to upload images: \(error)")
                         }
@@ -52,6 +53,4 @@ struct PicturesRegistration: View {
             ImagePicker(images: $selectedImages)  // This assumes you have a custom ImagePicker that can handle multiple images
         }
     }
-    
-    
 }

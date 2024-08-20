@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct NameAgeRegistration: View {
-    @Binding var path: AuthenticationNavigationPath
-    
+    @Environment(AuthenticationNavigationPathStore.self) var authPathStore
+
     @Binding var surname: String
     @Binding var name: String
     @Binding var username: String
@@ -29,20 +29,13 @@ struct NameAgeRegistration: View {
                 .padding()
             
             Button("Next") {
-                path.navigate(to: .registerOccupation)
+                authPathStore.navigate(to: .registerOccupation)
             }
             .padding()
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(8)
 
-//            NavigationLink(destination: OccupationChoiceView(path: $path).environmentObject(self.viewModel)) {
-//                Text("Next")
-//                    .padding()
-//                    .background(Color.blue)
-//                    .foregroundColor(.white)
-//                    .cornerRadius(8)
-//            }
             if let errorMessage = errorMessage {
                 Text(errorMessage)
                     .foregroundColor(.red)
@@ -55,15 +48,11 @@ struct NameAgeRegistration: View {
 
 #Preview {
     NameAgeRegistration(
-        path: .constant(
-            AuthenticationNavigationPath()
-        ),
         surname: .constant("surname"),
         name: .constant("name"),
         username: .constant("username"),
         age: .constant(Date()),
         errorMessage: .constant(nil)
     )
-        .environmentObject(RegisterViewModel())
 }
 

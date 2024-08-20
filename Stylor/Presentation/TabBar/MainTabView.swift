@@ -15,7 +15,8 @@ struct MainTabView: View {
             Text("Inbox View").tabItem { Image(systemName: "bubble").tag(2) }
             Text("Profile View").tabItem { Image(systemName: "person").tag(3) }
             PortfolioView().tabItem { Image(systemName: "person").tag(4) }
-        }.tint(.primary)   }
+        }.tint(.primary)
+    }
 }
 
 #Preview {

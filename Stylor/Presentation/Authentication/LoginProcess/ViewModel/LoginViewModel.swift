@@ -11,11 +11,9 @@ import Combine
 
 @Observable
 class LoginViewModel {
-    
-    let didLogin = PassthroughSubject<Void, Never>()
-    
+
     func login(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] (result, error) in
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 print("Failed to login:", error)
                 return
@@ -23,7 +21,7 @@ class LoginViewModel {
             
             // Successfully logged in
             print("Successfully logged in with user:", result?.user.uid ?? "")
-            self?.didLogin.send()
+            AuthState.shared.update(to: .loggedIn)
         }
     }
 }
