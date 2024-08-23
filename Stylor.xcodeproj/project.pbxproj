@@ -71,6 +71,7 @@
 		D49EA5592C52C63300097B49 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA5582C52C63300097B49 /* PortfolioView.swift */; };
 		D49EA55B2C53CD1E00097B49 /* Occupation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA55A2C53CD1E00097B49 /* Occupation.swift */; };
 		D49EA55F2C540FEA00097B49 /* OccupationChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */; };
+		D4ED4B9B2C791F540055E735 /* PortfolioCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED4B9A2C791F540055E735 /* PortfolioCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		D49EA5582C52C63300097B49 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		D49EA55A2C53CD1E00097B49 /* Occupation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occupation.swift; sourceTree = "<group>"; };
 		D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccupationChoiceView.swift; sourceTree = "<group>"; };
+		D4ED4B9A2C791F540055E735 /* PortfolioCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +482,7 @@
 				D479832F2C4482E80077746A /* SwipeActionIndicatorView.swift */,
 				D47983342C4702DB0077746A /* CardStackView.swift */,
 				D47983482C47EBB10077746A /* ImageScrollingOverlay.swift */,
+				D4ED4B9A2C791F540055E735 /* PortfolioCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 				D49EA5382C49D64200097B49 /* NameAgeRegistration.swift in Sources */,
 				D49EA53A2C49D66500097B49 /* MailPasswordRegistration.swift in Sources */,
 				D48A7B9F2C39DE3D00D3EDF7 /* UserInfoView.swift in Sources */,
+				D4ED4B9B2C791F540055E735 /* PortfolioCard.swift in Sources */,
 				D49EA54C2C4D7E3600097B49 /* UserDataService.swift in Sources */,
 				D41ECCFE2C56A34900C5DCDA /* UserLookupViewModel.swift in Sources */,
 				D49EA5352C4979D300097B49 /* ConvertionUtils.swift in Sources */,

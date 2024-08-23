@@ -17,20 +17,12 @@ struct PortfolioView: View {
             ScrollView {
                 LazyVGrid(
                     columns: [
-                        GridItem(.flexible(), spacing: 4),
-                        GridItem(.flexible(), spacing: 4),
-                        GridItem(.flexible(), spacing: 4)
+                        GridItem(.flexible(), spacing: 10)
                     ],
                     spacing: 4
                 ) {
                     ForEach(currentUser.userPortfolioImages, id: \.self) { img in
-                        WebImage(url: URL(string: img))
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                            .accessibilityLabel("User uploaded image")
+                        PortfolioCard(img: .constant(img))
                     }
                 }
             }
