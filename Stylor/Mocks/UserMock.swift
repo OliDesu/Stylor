@@ -31,7 +31,7 @@ struct MockData {
             surname: "Cristiano",
             username: "Messi",
 
-            age: Date(),
+            age: Date(12091998),
             role: .model,
 
             userPortfolioImages: ["messi","messi2","messi3"]
