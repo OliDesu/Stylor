@@ -12,6 +12,8 @@
 		97E395912C7384F0005C713E /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E395902C7384F0005C713E /* AuthState.swift */; };
 		97E395932C73889F005C713E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97E395922C73889F005C713E /* GoogleService-Info.plist */; };
 		D412A4942C5D684A0060C495 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D412A4932C5D684A0060C495 /* SDWebImageSwiftUI */; };
+		D416A58A2C7B69DC00C98A67 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416A5892C7B69DC00C98A67 /* Message.swift */; };
+		D416A58C2C7B6D9400C98A67 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416A58B2C7B6D9400C98A67 /* Conversation.swift */; };
 		D41ECCFC2C55386200C5DCDA /* ProfileSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ECCFB2C55386200C5DCDA /* ProfileSearchView.swift */; };
 		D41ECCFE2C56A34900C5DCDA /* UserLookupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ECCFD2C56A34900C5DCDA /* UserLookupViewModel.swift */; };
 		D421AE142C6F64E400FABB69 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421AE132C6F64E400FABB69 /* LoginView.swift */; };
@@ -96,6 +98,8 @@
 		97E3958D2C7383CD005C713E /* AuthenticationNavigationPathStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationNavigationPathStore.swift; sourceTree = "<group>"; };
 		97E395902C7384F0005C713E /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		97E395922C73889F005C713E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D416A5892C7B69DC00C98A67 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		D416A58B2C7B6D9400C98A67 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		D41ECCFB2C55386200C5DCDA /* ProfileSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSearchView.swift; sourceTree = "<group>"; };
 		D41ECCFD2C56A34900C5DCDA /* UserLookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLookupViewModel.swift; sourceTree = "<group>"; };
 		D421AE132C6F64E400FABB69 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -307,6 +311,8 @@
 				D479833B2C4720D10077746A /* User.swift */,
 				D479833D2C47212D0077746A /* Card.swift */,
 				D49EA55A2C53CD1E00097B49 /* Occupation.swift */,
+				D416A5892C7B69DC00C98A67 /* Message.swift */,
+				D416A58B2C7B6D9400C98A67 /* Conversation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -718,6 +724,7 @@
 				D49EA53C2C49D67700097B49 /* PicturesRegistration.swift in Sources */,
 				D48A7B9C2C39DACF00D3EDF7 /* CardView.swift in Sources */,
 				D479834B2C4805970077746A /* UserApiService.swift in Sources */,
+				D416A58C2C7B6D9400C98A67 /* Conversation.swift in Sources */,
 				D49EA55B2C53CD1E00097B49 /* Occupation.swift in Sources */,
 				D421AE162C6F659A00FABB69 /* LoginViewModel.swift in Sources */,
 				D49EA5422C4BC58800097B49 /* ImageApiService.swift in Sources */,
@@ -736,6 +743,7 @@
 				D48A7B9F2C39DE3D00D3EDF7 /* UserInfoView.swift in Sources */,
 				D4ED4B9B2C791F540055E735 /* PortfolioCard.swift in Sources */,
 				D49EA54C2C4D7E3600097B49 /* UserDataService.swift in Sources */,
+				D416A58A2C7B69DC00C98A67 /* Message.swift in Sources */,
 				D41ECCFE2C56A34900C5DCDA /* UserLookupViewModel.swift in Sources */,
 				D49EA5352C4979D300097B49 /* ConvertionUtils.swift in Sources */,
 				D49EA5592C52C63300097B49 /* PortfolioView.swift in Sources */,
