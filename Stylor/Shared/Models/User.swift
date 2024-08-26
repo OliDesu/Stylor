@@ -7,8 +7,8 @@
 
 import Foundation
 import FirebaseFirestoreSwift
-struct User: Codable, Identifiable, Hashable{
-    let id: String
+public struct User: Codable, Identifiable, Hashable{
+    public let id: String
     let firstName: String
     let lastName: String
     var age: Date

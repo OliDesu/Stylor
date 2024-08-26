@@ -14,17 +14,14 @@ public struct Message: Identifiable, Hashable {
         case sending
         case sent
         case read
-        case error(DraftMessage)
     }
-
     public var id: String
     public var user: User
     public var status: Status?
     public var createdAt: Date
 
     public var text: String
-    public var attachments: [Attachment]
-    public var recording: Recording?
+
     public var replyMessage: ReplyMessage?
 
     public static func ==(lhs: Message, rhs: Message) -> Bool {
@@ -33,8 +30,6 @@ public struct Message: Identifiable, Hashable {
                lhs.status == rhs.status &&
                lhs.createdAt == rhs.createdAt &&
                lhs.text == rhs.text &&
-               lhs.attachments == rhs.attachments &&
-               lhs.recording == rhs.recording &&
                lhs.replyMessage == rhs.replyMessage
     }
 
@@ -44,8 +39,6 @@ public struct Message: Identifiable, Hashable {
         hasher.combine(status)
         hasher.combine(createdAt)
         hasher.combine(text)
-        hasher.combine(attachments)
-        hasher.combine(recording)
         hasher.combine(replyMessage)
     }
 }
