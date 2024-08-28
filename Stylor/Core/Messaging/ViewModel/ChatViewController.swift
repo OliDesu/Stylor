@@ -10,6 +10,7 @@ import MessageKit
 import InputBarAccessoryView
 import FirebaseFirestore
 import FirebaseAuth
+import MessageInputBar
 
 class ChatViewController: MessagesViewController {
 
@@ -58,29 +59,30 @@ class ChatViewController: MessagesViewController {
         }
     }
 }
-
-extension ChatViewController: MessagesDataSource {
-    func currentSender() -> SenderType {
-        return Sender(senderId: Auth.auth().currentUser?.uid ?? "", displayName: Auth.auth().currentUser?.email ?? "Unknown")
-    }
+extension ChatViewController: MessagesDataSource, MessageCellDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
 
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
-        return 1
-    }
-
-    func numberOfItems(inSection section: Int, in messagesCollectionView: MessagesCollectionView) -> Int {
         return messages.count
     }
 
-    func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
-        return messages[indexPath.item]
+    func currentSender() -> Sender {
+        return Sender(id: member.messageID, displayName: member.name)
     }
-}
 
-extension ChatViewController: MessagesLayoutDelegate, MessagesDisplayDelegate {
-    func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        return isFromCurrentSender(message: message) ? .blue : .gray
+    func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
+        return messages[indexPath.section]
     }
+
+    func didTapAvatar(in cell: MessageCollectionViewCell) {
+        guard let indexPath = messagesCollectionView.indexPath(for: cell) else { return }
+        let message = messages[indexPath.section]
+        print("Message : \(message)")
+    }
+
+    func messageTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        return 12
+    }
+
 }
 
 extension ChatViewController: InputBarAccessoryViewDelegate {
