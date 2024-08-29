@@ -10,7 +10,6 @@ import MessageKit
 import InputBarAccessoryView
 import FirebaseFirestore
 import FirebaseAuth
-import MessageInputBar
 
 class ChatViewController: MessagesViewController {
 
@@ -59,33 +58,69 @@ class ChatViewController: MessagesViewController {
         }
     }
 }
-extension ChatViewController: MessagesDataSource, MessageCellDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
 
+// MARK: - MessagesDataSource
+extension ChatViewController: MessagesDataSource {
+    
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
         return messages.count
     }
 
-    func currentSender() -> Sender {
-        return Sender(id: member.messageID, displayName: member.name)
+    func currentSender() -> SenderType {
+        guard let user = Auth.auth().currentUser else {
+            fatalError("No logged in user")
+        }
+        return Sender(senderId: user.uid, displayName: user.email ?? "Unknown")
     }
 
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
         return messages[indexPath.section]
     }
 
-    func didTapAvatar(in cell: MessageCollectionViewCell) {
-        guard let indexPath = messagesCollectionView.indexPath(for: cell) else { return }
-        let message = messages[indexPath.section]
-        print("Message : \(message)")
+    func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+        return NSAttributedString(
+            string: message.sentDate.description,
+            attributes: [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.darkGray]
+        )
+    }
+}
+
+// MARK: - MessagesLayoutDelegate
+extension ChatViewController: MessagesLayoutDelegate {
+    
+    func avatarSize(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGSize {
+        return CGSize(width: 30, height: 30)
     }
 
     func messageTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
-        return 12
+        return 20
     }
 
+    func messageBottomLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        return 16
+    }
 }
 
+// MARK: - MessagesDisplayDelegate
+extension ChatViewController: MessagesDisplayDelegate {
+    
+    func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
+        return isFromCurrentSender(message: message) ? .blue : .lightGray
+    }
+
+    func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> Bool {
+        return true
+    }
+
+    func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
+        let corner: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
+        return .bubbleTail(corner, .curved)
+    }
+}
+
+// MARK: - InputBarAccessoryViewDelegate
 extension ChatViewController: InputBarAccessoryViewDelegate {
+    
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         guard let user = Auth.auth().currentUser else { return }
         
