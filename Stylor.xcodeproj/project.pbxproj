@@ -75,6 +75,7 @@
 		D49EA5592C52C63300097B49 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA5582C52C63300097B49 /* PortfolioView.swift */; };
 		D49EA55B2C53CD1E00097B49 /* Occupation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA55A2C53CD1E00097B49 /* Occupation.swift */; };
 		D49EA55F2C540FEA00097B49 /* OccupationChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */; };
+		D4C6435A2C82209500FD8AB4 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C643592C82209500FD8AB4 /* ChatView.swift */; };
 		D4ED4B9B2C791F540055E735 /* PortfolioCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED4B9A2C791F540055E735 /* PortfolioCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,7 @@
 		D49EA5582C52C63300097B49 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		D49EA55A2C53CD1E00097B49 /* Occupation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occupation.swift; sourceTree = "<group>"; };
 		D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccupationChoiceView.swift; sourceTree = "<group>"; };
+		D4C643592C82209500FD8AB4 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		D4ED4B9A2C791F540055E735 /* PortfolioCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -479,6 +481,7 @@
 		D48A7B962C39D1B600D3EDF7 /* Messaging */ = {
 			isa = PBXGroup;
 			children = (
+				D4C643582C82206700FD8AB4 /* Views */,
 				D48BD9BA2C7E6A60009EC0E4 /* ViewModel */,
 				D48BD9B92C7E6A56009EC0E4 /* View */,
 			);
@@ -571,6 +574,14 @@
 				D49EA5582C52C63300097B49 /* PortfolioView.swift */,
 			);
 			path = Porfolio;
+			sourceTree = "<group>";
+		};
+		D4C643582C82206700FD8AB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4C643592C82209500FD8AB4 /* ChatView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -749,6 +760,7 @@
 				D479834B2C4805970077746A /* UserApiService.swift in Sources */,
 				D49EA55B2C53CD1E00097B49 /* Occupation.swift in Sources */,
 				D421AE162C6F659A00FABB69 /* LoginViewModel.swift in Sources */,
+				D4C6435A2C82209500FD8AB4 /* ChatView.swift in Sources */,
 				D49EA5422C4BC58800097B49 /* ImageApiService.swift in Sources */,
 				D47983472C472E110077746A /* UserMock.swift in Sources */,
 				D41ECCFC2C55386200C5DCDA /* ProfileSearchView.swift in Sources */,
