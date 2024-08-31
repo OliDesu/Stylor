@@ -7,11 +7,22 @@
 
 import SwiftUI
 
-struct ChatView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct ChatView: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> ChatViewController {
+        return ChatViewController()
+    }
+
+    func updateUIViewController(_ uiViewController: ChatViewController, context: Context) {
+        // Perform any updates if necessary
     }
 }
+
+struct ChatView_Previews: PreviewProvider {
+    static var previews: some View {
+        ChatView()
+    }
+}
+
 
 #Preview {
     ChatView()
