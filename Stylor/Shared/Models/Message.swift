@@ -9,14 +9,15 @@ import Foundation
 import SwiftUI
 import FirebaseInAppMessaging
 import MessageKit
-struct Sender: SenderType {
-    var senderId: String
-    var displayName: String
-}
 
 struct Message: MessageType {
-    var sender: SenderType
-    var messageId: String
-    var sentDate: Date
-    var kind: MessageKind
+    let sender: SenderType
+    let messageId: String
+    let sentDate: Date
+    let kind: MessageKind
+}
+
+struct Sender: SenderType {
+    let senderId: String
+    let displayName: String
 }
