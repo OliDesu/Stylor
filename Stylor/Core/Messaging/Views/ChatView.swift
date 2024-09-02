@@ -10,108 +10,103 @@ import MessageKit
 import InputBarAccessoryView
 import SwiftUI
 import FirebaseAuth
-class ChatView: MessagesViewController {
 
-    private var viewModel = ChatViewModel()
+import UIKit
+import MessageKit
+import MessageInputBar
+
+class ChatViewController: MessagesViewController {
+
+    private var messages: [Message] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureMessageCollectionView()
-        configureMessageInputBar()
-        bindViewModel()
-        viewModel.listenForMessages()
+        setup()
     }
 
-    private func configureMessageCollectionView() {
+    private func setup() {
+
+        messageInputBar.sendButton.setTitleColor(.white, for: .disabled)
+        messageInputBar.sendButton.setTitleColor(.white, for: .normal)
+        messageInputBar.sendButton.setTitleColor(.white, for: .highlighted)
+        messageInputBar.sendButton.setTitle(strings.send, for: .normal)
+        messageInputBar.inputTextView.tintColor = .white
+        messageInputBar.inputTextView.placeholderTextColor = .white
+        messageInputBar.inputTextView.textColor = .white
+        messageInputBar.inputTextView.placeholder = "placeholder"
+        messagesCollectionView.backgroundColor = .white
+        messageInputBar.backgroundView.backgroundColor = .blue
+
+
         messagesCollectionView.messagesDataSource = self
+        messagesCollectionView.messageCellDelegate = self
         messagesCollectionView.messagesLayoutDelegate = self
-        messagesCollectionView.messagesDisplayDelegate = self
-    }
-
-    private func configureMessageInputBar() {
         messageInputBar.delegate = self
-    }
+        messagesCollectionView.messagesDisplayDelegate = self
 
-    private func bindViewModel() {
-        viewModel.onMessagesUpdated = { [weak self] in
-            DispatchQueue.main.async {
-                self?.messagesCollectionView.reloadData()
-                self?.messagesCollectionView.scrollToLastItem()
-            }
-        }
+        scrollsToBottomOnKeyboardBeginsEditing = true // default false
+        maintainPositionOnKeyboardFrameChanged = true // default false
+
     }
 }
 
-// MARK: - MessagesDataSource
-extension ChatView: MessagesDataSource {
-    
+
+extension ChatViewController: MessagesDataSource, MessageCellDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
-        return viewModel.messages.count
+        return messages.count
     }
 
-    func currentSender() -> SenderType {
-        guard let user = Auth.auth().currentUser else {
-            fatalError("No logged in user")
-        }
-        return Sender(senderId: user.uid, displayName: user.email ?? "Unknown")
+    func currentSender() -> Sender {
+        return Sender(id: member.messageID, displayName: member.name)
     }
 
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
-        return viewModel.messages[indexPath.section]
+        return messages[indexPath.section]
     }
 
-    func cellTopLabelAttributedText(for message: MessageType, at indexPath: IndexPath) -> NSAttributedString? {
-        return NSAttributedString(
-            string: message.sentDate.description,
-            attributes: [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.darkGray]
-        )
+    func didTapAvatar(in cell: MessageCollectionViewCell) {
+        guard let indexPath = messagesCollectionView.indexPath(for: cell) else { return }
+        let message = messages[indexPath.section]
+        print("Message : \(message)")
+    }
+
+    func messageTopLabelHeight(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        return 12
+    }
+
+}
+
+extension ChatViewController: MessagesLayoutDelegate {
+    func heightForLocation(message: MessageType, at indexPath: IndexPath, with maxWidth: CGFloat, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        return 0
     }
 }
 
-// MARK: - MessagesLayoutDelegate
-extension ChatView: MessagesLayoutDelegate {
-    
-    func avatarSize(for message: MessageType, at indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 30, height: 30)
+extension ChatViewController: MessagesDisplayDelegate {
+
+    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+
+        let message = messages[indexPath.section]
+        if let userimage = URL(string: message.member.image) {
+            //Nuke.loadImage(with: userimage, options: config.options_stream, into: avatarView)
+            print("Image URL : \(userimage)")
+        }
+        avatarView.backgroundColor = .black
     }
 
-    func messageTopLabelHeight(for message: MessageType, at indexPath: IndexPath) -> CGFloat {
-        return 20
-    }
-
-    func messageBottomLabelHeight(for message: MessageType, at indexPath: IndexPath) -> CGFloat {
-        return 16
-    }
-}
-
-// MARK: - MessagesDisplayDelegate
-extension ChatView: MessagesDisplayDelegate {
-    
-    func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        return isFromCurrentSender(message: message) ? .blue : .lightGray
-    }
-
-    func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath) -> Bool {
-        return true
-    }
-
-    func messageStyle(for message: MessageType, at indexPath: IndexPath) -> MessageStyle {
-        let corner: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
-        return .bubbleTail(corner, .curved)
+    func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
+        let tail: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight : .bottomLeft
+        return .bubbleTail(tail, .curved)
     }
 }
 
-// MARK: - InputBarAccessoryViewDelegate
-extension ChatView: InputBarAccessoryViewDelegate {
-    
-    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
-        viewModel.sendMessage(text: text)
-        inputBar.inputTextView.text = ""
+extension ChatViewController: MessageInputBarDelegate {
+
+    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+        print("Message : \(text)")
     }
 }
-
-
-
 #Preview {
     ChatView()
 }
