@@ -11,12 +11,14 @@ struct LoginView: View {
     @State private(set) var viewModel: LoginViewModel
     @State private var email = ""
     @State private var password = ""
+    @State private var header = "📸"
 
     var body: some View {
         VStack {
-            TextField("Email", text: $email)
+            TextField("Header", text: $header ).padding()
+            TextField("Email", text: $email).padding()
             
-            TextField("Password", text: $password)
+            TextField("Password", text: $password).padding()
             
             Button("Login") {
                 viewModel.login(email: email, password: password)
