@@ -15,7 +15,7 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
-            TextField("Header", text: $header ).padding()
+            TextField("Header", text: $header ).padding().border(.white, width: 3)
             TextField("Email", text: $email).padding()
             
             TextField("Password", text: $password).padding()
