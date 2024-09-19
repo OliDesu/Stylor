@@ -1,4 +1,3 @@
-//
 //  ConversationView.swift
 //  Stylor
 //
@@ -6,14 +5,20 @@
 //
 
 import SwiftUI
-
-
+import MessageKit
 
 struct ConversationView: View {
     @State private var messages: [Message] = [
-        Message(text: "Hello!", isSentByUser: false),
-        Message(text: "Hi there!", isSentByUser: true)
+        Message(sender: Sender(senderId: "1", displayName: "User 1"),
+                messageId: UUID().uuidString,
+                sentDate: Date(),
+                kind: .text("Hello!")),
+        Message(sender: Sender(senderId: "2", displayName: "User 2"),
+                messageId: UUID().uuidString,
+                sentDate: Date(),
+                kind: .text("Hi there!"))
     ]
+    
     @State private var inputMessage: String = ""
     
     var body: some View {
@@ -21,18 +26,18 @@ struct ConversationView: View {
             ScrollView {
                 ScrollViewReader { scrollView in
                     VStack(spacing: 10) {
-                        ForEach(messages) { message in
+                        ForEach(messages, id: \.messageId) { message in
                             HStack {
-                                if message.isSentByUser {
+                                if message.sender.senderId == "1" {
                                     Spacer()
-                                    Text(message.text)
+                                    Text(messageText(from: message.kind))
                                         .padding()
                                         .background(Color.blue)
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
                                         .frame(maxWidth: 250, alignment: .trailing)
                                 } else {
-                                    Text(message.text)
+                                    Text(messageText(from: message.kind))
                                         .padding()
                                         .background(Color.gray.opacity(0.2))
                                         .cornerRadius(10)
@@ -44,10 +49,10 @@ struct ConversationView: View {
                     }
                     .padding(.horizontal)
                     .onAppear {
-                        scrollView.scrollTo(messages.last?.id, anchor: .bottom)
+                        scrollView.scrollTo(messages.last?.messageId, anchor: .bottom)
                     }
                     .onChange(of: messages) { _ in
-                        scrollView.scrollTo(messages.last?.id, anchor: .bottom)
+                        scrollView.scrollTo(messages.last?.messageId, anchor: .bottom)
                     }
                 }
             }
@@ -71,16 +76,25 @@ struct ConversationView: View {
     
     func sendMessage() {
         if !inputMessage.isEmpty {
-            let newMessage = Message(text: inputMessage, isSentByUser: true)
+            let newMessage = Message(sender: Sender(senderId: "1", displayName: "User 1"),
+                                     messageId: UUID().uuidString,
+                                     sentDate: Date(),
+                                     kind: .text(inputMessage))
             messages.append(newMessage)
             inputMessage = ""
         }
     }
+    
+    func messageText(from kind: MessageKind) -> String {
+        switch kind {
+        case .text(let text):
+            return text
+        default:
+            return ""
+        }
+    }
 }
 
-#Preview
-struct ConversationView_Previews: PreviewProvider {
-    static var previews: some View {
-        ConversationView()
-    }
+#Preview {
+ConversationView()
 }
