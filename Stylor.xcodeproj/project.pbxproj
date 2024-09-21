@@ -75,6 +75,7 @@
 		D49EA55B2C53CD1E00097B49 /* Occupation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA55A2C53CD1E00097B49 /* Occupation.swift */; };
 		D49EA55F2C540FEA00097B49 /* OccupationChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */; };
 		D4B148502C9A2F9800901BAC /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B1484F2C9A2F9800901BAC /* ConversationView.swift */; };
+		D4B148522C9F72BB00901BAC /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B148512C9F72BB00901BAC /* ConversationViewModel.swift */; };
 		D4ED4B9B2C791F540055E735 /* PortfolioCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED4B9A2C791F540055E735 /* PortfolioCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,7 @@
 		D49EA55A2C53CD1E00097B49 /* Occupation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occupation.swift; sourceTree = "<group>"; };
 		D49EA55E2C540FEA00097B49 /* OccupationChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccupationChoiceView.swift; sourceTree = "<group>"; };
 		D4B1484F2C9A2F9800901BAC /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = SOURCE_ROOT; };
+		D4B148512C9F72BB00901BAC /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = SOURCE_ROOT; };
 		D4ED4B9A2C791F540055E735 /* PortfolioCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -481,7 +483,6 @@
 			children = (
 				D4C643582C82206700FD8AB4 /* Views */,
 				D48BD9BA2C7E6A60009EC0E4 /* ViewModel */,
-				D48BD9B92C7E6A56009EC0E4 /* View */,
 			);
 			name = Messaging;
 			path = ../Core/Messaging;
@@ -507,16 +508,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D48BD9B92C7E6A56009EC0E4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		D48BD9BA2C7E6A60009EC0E4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D4B148512C9F72BB00901BAC /* ConversationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -750,6 +745,7 @@
 				D47983442C4726C70077746A /* CardApiService.swift in Sources */,
 				97E395802C737DEC005C713E /* AppView.swift in Sources */,
 				D48A7B662C39D08F00D3EDF7 /* AuthenticationView.swift in Sources */,
+				D4B148522C9F72BB00901BAC /* ConversationViewModel.swift in Sources */,
 				D48A7B642C39D08F00D3EDF7 /* StylorApp.swift in Sources */,
 				D48A7BB42C40846F00D3EDF7 /* RegisterViewModel.swift in Sources */,
 				D49EA53C2C49D67700097B49 /* PicturesRegistration.swift in Sources */,
